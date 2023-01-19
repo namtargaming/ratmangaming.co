@@ -1,0 +1,54 @@
+{
+    "name": "gunControlls",
+    "maps": [
+        {
+            "name": "mainGunControlls",
+            "id": "08150f1a-660f-4caf-893c-27df00d4f76d",
+            "actions": [
+                {
+                    "name": "shoot",
+                    "type": "Button",
+                    "id": "ed749b1d-13d9-4e08-a096-2c5e9c74fc10",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Hold",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "reload",
+                    "type": "Button",
+                    "id": "9b271c46-b0e4-4a06-ad3f-1cb2e830c386",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "22439e4a-4d28-454c-8e4b-3be8c428eb25",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "37fbaad1-cfaa-4381-bbdf-1950a93e71eb",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "reload",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

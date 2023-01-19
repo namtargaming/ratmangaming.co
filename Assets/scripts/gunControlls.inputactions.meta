@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 0ff692f0babbc5b4bac9982c43ef3dee
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 8404be70184654265930450def6a9037, type: 3}
+  generateWrapperCode: 1
+  wrapperCodePath: 
+  wrapperClassName: gunControlls
+  wrapperCodeNamespace: 
