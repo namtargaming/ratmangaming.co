@@ -1714,7 +1714,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1466864693}
   m_Material: {fileID: 13400000, guid: 5346137085d3f3643b2dd82e6a4009ee, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1.7905805
   m_Direction: 1
@@ -2462,14 +2462,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6938581882742996145, guid: a9d7ccbf3825b1c48a02c84936ec0ab7,
         type: 3}
-      propertyPath: m_Icon
-      value: 
-      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000,
-        type: 0}
-    - target: {fileID: 6938581882742996145, guid: a9d7ccbf3825b1c48a02c84936ec0ab7,
-        type: 3}
       propertyPath: m_Name
       value: gunparent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6938581882742996145, guid: a9d7ccbf3825b1c48a02c84936ec0ab7,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d7ccbf3825b1c48a02c84936ec0ab7, type: 3}

@@ -6,23 +6,14 @@ using UnityEngine.InputSystem;
 
 public class gunScript : MonoBehaviour
 {
-    bool isShooting = false;
-    private InputAction shootAction;
 
-    private void Awake() {
-        if (shootAction.performed){
-            isShooting = true;
-        }      
-    }
-    private void Update() {
-        if (isShooting == true){
-            void shooting();
-        }
-        
+    private Gameobject 
+
+    public void shoot() {
+    Debug.Log("BANG!!!");
     }
 
-    private void shooting(){
-        Debug.Log("shooting");
+    public void relode() {
+        Debug.Log("relaoduing");
     }
-
 }
