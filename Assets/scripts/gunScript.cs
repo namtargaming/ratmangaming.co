@@ -7,8 +7,9 @@ using UnityEngine.InputSystem;
 public class gunScript : MonoBehaviour
 {
 
-    private Gameobject 
-
+    private void Update() {
+        Ray bulletPath = gunparent.position transform.TransformDirection(Vector3.forward);
+    }
     public void shoot() {
     Debug.Log("BANG!!!");
     }
