@@ -7,7 +7,7 @@ public class bulletscript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+   //     Rigedbody.velocity
     }
 
     // Update is called once per frame
