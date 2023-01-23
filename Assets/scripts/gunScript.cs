@@ -6,12 +6,12 @@ using UnityEngine.InputSystem;
 
 public class gunScript : MonoBehaviour
 {
-
-    private void Update() {
-        Ray bulletPath = gunparent.position transform.TransformDirection(Vector3.forward);
-    }
+    public int bulletSpeed = 10;
+    public int reloadTime = 10;
+    public GameObject bullet;
     public void shoot() {
-    Debug.Log("BANG!!!");
+        Debug.Log("BANG!!!");
+        Instantiate(bullet, transform, true);
     }
 
     public void relode() {
