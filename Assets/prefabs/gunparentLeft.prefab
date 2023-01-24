@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3925298963799636369}
   - component: {fileID: 7615584442004098560}
   m_Layer: 0
-  m_Name: gunparent
+  m_Name: gunparentLeft
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -61,26 +61,18 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 7615584442004098560}
-        m_TargetAssemblyTypeName: gunScript, Assembly-CSharp
-        m_MethodName: shoot
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
+      m_Calls: []
     m_ActionId: ed749b1d-13d9-4e08-a096-2c5e9c74fc10
     m_ActionName: mainGunControlls/shoot
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 9b271c46-b0e4-4a06-ad3f-1cb2e830c386
+    m_ActionName: mainGunControlls/reload
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7615584442004098560}
         m_TargetAssemblyTypeName: gunScript, Assembly-CSharp
-        m_MethodName: relode
+        m_MethodName: shootL
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -90,14 +82,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 9b271c46-b0e4-4a06-ad3f-1cb2e830c386
-    m_ActionName: mainGunControlls/reload
-  - m_PersistentCalls:
-      m_Calls: []
     m_ActionId: cd4393d0-97ba-47ea-b1d6-e3e8b04e5d40
     m_ActionName: mainGunControlls(left)/shoot(left)
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7615584442004098560}
+        m_TargetAssemblyTypeName: gunScript, Assembly-CSharp
+        m_MethodName: relodeL
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 6fdc6000-b558-448a-9f6a-72522ae26c83
     m_ActionName: mainGunControlls(left)/relode(left)
   m_NeverAutoSwitchControlSchemes: 0

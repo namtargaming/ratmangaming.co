@@ -9,16 +9,28 @@ public class gunScript : MonoBehaviour
     public int bulletSpeed = 10;
     public int reloadTime = 10;
     public GameObject bullet;
+    public GameObject bulletCasing;
     private Quaternion rotation;
     private void Update() {
         rotation = transform.rotation * Quaternion.AngleAxis(90, Vector3.right);
     }
     public void shoot() {
-        Debug.Log("BANG!!!");
-        Instantiate(bullet, transform.position, rotation);
+    Instantiate(bullet, transform.position, rotation);
+    Instantiate(bulletCasing, transform.position, rotation);
+
     }
 
     public void relode() {
-        Debug.Log("relaoduing");
+
+    }
+
+    public void shootL() {
+    Debug.Log("BANG!!!");
+    Instantiate(bullet, transform.position, rotation);
+    Instantiate(bulletCasing, transform.position, rotation);
+    }
+
+    public void relodeL () {
+
     }
 }
