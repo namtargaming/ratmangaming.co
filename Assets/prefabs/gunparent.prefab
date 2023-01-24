@@ -48,7 +48,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
     type: 3}
-  m_NotificationBehavior: 2
+  m_NotificationBehavior: 0
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -119,9 +119,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 10
   reloadTime: 10
+  sideLT_RF: 1
   bullet: {fileID: 6376535121937203880, guid: 34bc8f8f4e2fb9a428d0de229d1c08d6, type: 3}
   bulletCasing: {fileID: 5001233927931444893, guid: 1333e05302698db43a6a701522f87edf,
     type: 3}
+  shootR: {fileID: -7692976152154624497, guid: 0ff692f0babbc5b4bac9982c43ef3dee, type: 3}
+  shootL: {fileID: 0}
+  reloadR: {fileID: 1402776540596588696, guid: 0ff692f0babbc5b4bac9982c43ef3dee, type: 3}
+  reloadL: {fileID: 0}
 --- !u!1001 &8639481320542111047
 PrefabInstance:
   m_ObjectHideFlags: 0
