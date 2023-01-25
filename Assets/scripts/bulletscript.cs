@@ -12,7 +12,7 @@ public class bulletscript : MonoBehaviour{
     {
         bullet = GetComponent<Rigidbody>();
 
-        bullet.AddForce(Vector3.forward * bulletspeed);
+        bullet.AddForce(gameObject. * bulletspeed);
     }
     // Update is called once per frame
     void Update()

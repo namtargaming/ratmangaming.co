@@ -44,6 +44,24 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""shoot(left)"",
+                    ""type"": ""Button"",
+                    ""id"": ""823d7fe9-34d8-414f-b877-b2a5d15f3bd8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""relode(left)"",
+                    ""type"": ""Button"",
+                    ""id"": ""88aa00ad-0091-46e6-85da-fc0258806018"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -68,36 +86,10 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                     ""action"": ""reload(right)"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
-                }
-            ]
-        },
-        {
-            ""name"": ""mainGunControlls(left)"",
-            ""id"": ""85b59b87-e03b-4294-bb36-16ea481809ee"",
-            ""actions"": [
-                {
-                    ""name"": ""shoot(left)"",
-                    ""type"": ""Button"",
-                    ""id"": ""cd4393d0-97ba-47ea-b1d6-e3e8b04e5d40"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""relode(left)"",
-                    ""type"": ""Button"",
-                    ""id"": ""6fdc6000-b558-448a-9f6a-72522ae26c83"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                }
-            ],
-            ""bindings"": [
-                {
                     ""name"": """",
-                    ""id"": ""5887ba91-3d89-4941-ac0b-19166ba24ab4"",
+                    ""id"": ""2f5b02be-44b7-4e6f-b852-efa729d2515f"",
                     ""path"": ""<XRController>{LeftHand}/triggerPressed"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -108,7 +100,7 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""92d6e558-6d00-49ce-8644-9f001e672ff6"",
+                    ""id"": ""3f57de51-e1e9-4317-a5aa-fb20c32cbe89"",
                     ""path"": ""<XRController>{LeftHand}/primaryButton"",
                     ""interactions"": """",
                     ""processors"": """",
@@ -126,10 +118,8 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         m_mainGunControllsright = asset.FindActionMap("mainGunControlls(right)", throwIfNotFound: true);
         m_mainGunControllsright_shootright = m_mainGunControllsright.FindAction("shoot(right)", throwIfNotFound: true);
         m_mainGunControllsright_reloadright = m_mainGunControllsright.FindAction("reload(right)", throwIfNotFound: true);
-        // mainGunControlls(left)
-        m_mainGunControllsleft = asset.FindActionMap("mainGunControlls(left)", throwIfNotFound: true);
-        m_mainGunControllsleft_shootleft = m_mainGunControllsleft.FindAction("shoot(left)", throwIfNotFound: true);
-        m_mainGunControllsleft_relodeleft = m_mainGunControllsleft.FindAction("relode(left)", throwIfNotFound: true);
+        m_mainGunControllsright_shootleft = m_mainGunControllsright.FindAction("shoot(left)", throwIfNotFound: true);
+        m_mainGunControllsright_relodeleft = m_mainGunControllsright.FindAction("relode(left)", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -191,12 +181,16 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
     private IMainGunControllsrightActions m_MainGunControllsrightActionsCallbackInterface;
     private readonly InputAction m_mainGunControllsright_shootright;
     private readonly InputAction m_mainGunControllsright_reloadright;
+    private readonly InputAction m_mainGunControllsright_shootleft;
+    private readonly InputAction m_mainGunControllsright_relodeleft;
     public struct MainGunControllsrightActions
     {
         private @gunControlls m_Wrapper;
         public MainGunControllsrightActions(@gunControlls wrapper) { m_Wrapper = wrapper; }
         public InputAction @shootright => m_Wrapper.m_mainGunControllsright_shootright;
         public InputAction @reloadright => m_Wrapper.m_mainGunControllsright_reloadright;
+        public InputAction @shootleft => m_Wrapper.m_mainGunControllsright_shootleft;
+        public InputAction @relodeleft => m_Wrapper.m_mainGunControllsright_relodeleft;
         public InputActionMap Get() { return m_Wrapper.m_mainGunControllsright; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -212,6 +206,12 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 @reloadright.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnReloadright;
                 @reloadright.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnReloadright;
                 @reloadright.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnReloadright;
+                @shootleft.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnShootleft;
+                @shootleft.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnShootleft;
+                @shootleft.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnShootleft;
+                @relodeleft.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnRelodeleft;
+                @relodeleft.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnRelodeleft;
+                @relodeleft.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnRelodeleft;
             }
             m_Wrapper.m_MainGunControllsrightActionsCallbackInterface = instance;
             if (instance != null)
@@ -222,41 +222,6 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 @reloadright.started += instance.OnReloadright;
                 @reloadright.performed += instance.OnReloadright;
                 @reloadright.canceled += instance.OnReloadright;
-            }
-        }
-    }
-    public MainGunControllsrightActions @mainGunControllsright => new MainGunControllsrightActions(this);
-
-    // mainGunControlls(left)
-    private readonly InputActionMap m_mainGunControllsleft;
-    private IMainGunControllsleftActions m_MainGunControllsleftActionsCallbackInterface;
-    private readonly InputAction m_mainGunControllsleft_shootleft;
-    private readonly InputAction m_mainGunControllsleft_relodeleft;
-    public struct MainGunControllsleftActions
-    {
-        private @gunControlls m_Wrapper;
-        public MainGunControllsleftActions(@gunControlls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @shootleft => m_Wrapper.m_mainGunControllsleft_shootleft;
-        public InputAction @relodeleft => m_Wrapper.m_mainGunControllsleft_relodeleft;
-        public InputActionMap Get() { return m_Wrapper.m_mainGunControllsleft; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(MainGunControllsleftActions set) { return set.Get(); }
-        public void SetCallbacks(IMainGunControllsleftActions instance)
-        {
-            if (m_Wrapper.m_MainGunControllsleftActionsCallbackInterface != null)
-            {
-                @shootleft.started -= m_Wrapper.m_MainGunControllsleftActionsCallbackInterface.OnShootleft;
-                @shootleft.performed -= m_Wrapper.m_MainGunControllsleftActionsCallbackInterface.OnShootleft;
-                @shootleft.canceled -= m_Wrapper.m_MainGunControllsleftActionsCallbackInterface.OnShootleft;
-                @relodeleft.started -= m_Wrapper.m_MainGunControllsleftActionsCallbackInterface.OnRelodeleft;
-                @relodeleft.performed -= m_Wrapper.m_MainGunControllsleftActionsCallbackInterface.OnRelodeleft;
-                @relodeleft.canceled -= m_Wrapper.m_MainGunControllsleftActionsCallbackInterface.OnRelodeleft;
-            }
-            m_Wrapper.m_MainGunControllsleftActionsCallbackInterface = instance;
-            if (instance != null)
-            {
                 @shootleft.started += instance.OnShootleft;
                 @shootleft.performed += instance.OnShootleft;
                 @shootleft.canceled += instance.OnShootleft;
@@ -266,14 +231,11 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
             }
         }
     }
-    public MainGunControllsleftActions @mainGunControllsleft => new MainGunControllsleftActions(this);
+    public MainGunControllsrightActions @mainGunControllsright => new MainGunControllsrightActions(this);
     public interface IMainGunControllsrightActions
     {
         void OnShootright(InputAction.CallbackContext context);
         void OnReloadright(InputAction.CallbackContext context);
-    }
-    public interface IMainGunControllsleftActions
-    {
         void OnShootleft(InputAction.CallbackContext context);
         void OnRelodeleft(InputAction.CallbackContext context);
     }

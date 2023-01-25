@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6938581882742996145}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.037, z: 0}
+  m_LocalPosition: {x: 0, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -124,9 +124,9 @@ MonoBehaviour:
   bulletCasing: {fileID: 5001233927931444893, guid: 1333e05302698db43a6a701522f87edf,
     type: 3}
   shootR: {fileID: -7692976152154624497, guid: 0ff692f0babbc5b4bac9982c43ef3dee, type: 3}
-  shootL: {fileID: 0}
+  shootL: {fileID: -9203535799376867878, guid: 0ff692f0babbc5b4bac9982c43ef3dee, type: 3}
   reloadR: {fileID: 1402776540596588696, guid: 0ff692f0babbc5b4bac9982c43ef3dee, type: 3}
-  reloadL: {fileID: 0}
+  reloadL: {fileID: 7077581293315171701, guid: 0ff692f0babbc5b4bac9982c43ef3dee, type: 3}
 --- !u!1001 &8639481320542111047
 PrefabInstance:
   m_ObjectHideFlags: 0

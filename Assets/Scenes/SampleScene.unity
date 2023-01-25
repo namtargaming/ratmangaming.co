@@ -364,6 +364,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: gunparentLeft
       objectReference: {fileID: 0}
+    - target: {fileID: 7615584442004098560, guid: 1826f5d1cb740424a93ed28340a0365b,
+        type: 3}
+      propertyPath: sideLT_RF
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615584442004098560, guid: 1826f5d1cb740424a93ed28340a0365b,
+        type: 3}
+      propertyPath: Shootbutton
+      value: 
+      objectReference: {fileID: 5297677072853211952, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
+        type: 3}
+    - target: {fileID: 7615584442004098560, guid: 1826f5d1cb740424a93ed28340a0365b,
+        type: 3}
+      propertyPath: reloadbutton
+      value: 
+      objectReference: {fileID: 8670783975023518388, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1826f5d1cb740424a93ed28340a0365b, type: 3}
 --- !u!4 &97730833 stripped
@@ -2383,6 +2400,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: gunparent
       objectReference: {fileID: 0}
+    - target: {fileID: 7615584442004098560, guid: a9d7ccbf3825b1c48a02c84936ec0ab7,
+        type: 3}
+      propertyPath: sideLT_RF
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7615584442004098560, guid: a9d7ccbf3825b1c48a02c84936ec0ab7,
+        type: 3}
+      propertyPath: Shootbutton
+      value: 
+      objectReference: {fileID: -7692976152154624497, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
+        type: 3}
+    - target: {fileID: 7615584442004098560, guid: a9d7ccbf3825b1c48a02c84936ec0ab7,
+        type: 3}
+      propertyPath: reloadbutton
+      value: 
+      objectReference: {fileID: 1402776540596588696, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d7ccbf3825b1c48a02c84936ec0ab7, type: 3}
 --- !u!4 &1939413513 stripped
