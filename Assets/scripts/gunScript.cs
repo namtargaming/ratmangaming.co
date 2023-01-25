@@ -43,7 +43,7 @@ public class gunScript : MonoBehaviour
 
     public void shoot() {
     Instantiate(bullet, transform.position, rotation);
-    Instantiate(bulletCasing, transform.position, rotation);
+    Instantiate(bulletCasing, transform.position + new Vector3(0,1,0) * 0.05f, rotation);
     amo -= 1;
     }
 

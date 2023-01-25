@@ -57,7 +57,7 @@
                 {
                     "name": "",
                     "id": "37fbaad1-cfaa-4381-bbdf-1950a93e71eb",
-                    "path": "<XRController>{RightHand}/primaryButton",
+                    "path": "<XRController>{RightHand}/joystickClicked",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -79,7 +79,7 @@
                 {
                     "name": "",
                     "id": "3f57de51-e1e9-4317-a5aa-fb20c32cbe89",
-                    "path": "<XRController>{LeftHand}/primaryButton",
+                    "path": "<XRController>{LeftHand}/joystickClicked",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
