@@ -48,7 +48,6 @@ public class gunScript : MonoBehaviour
     }
 
     public void relode() {
-        Debug.Log("relodeing");
-        amo = 10;
+        amo = 17;
     }
 }

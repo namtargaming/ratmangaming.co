@@ -62,6 +62,15 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""5518607c-ae61-437c-a6ef-cad5609e22eb"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -108,6 +117,17 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                     ""action"": ""relode(left)"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""fa15112d-1f05-4bbe-a9da-590611923f03"",
+                    ""path"": ""<XRController>{RightHand}/primaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -120,6 +140,7 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         m_mainGunControllsright_reloadright = m_mainGunControllsright.FindAction("reload(right)", throwIfNotFound: true);
         m_mainGunControllsright_shootleft = m_mainGunControllsright.FindAction("shoot(left)", throwIfNotFound: true);
         m_mainGunControllsright_relodeleft = m_mainGunControllsright.FindAction("relode(left)", throwIfNotFound: true);
+        m_mainGunControllsright_jump = m_mainGunControllsright.FindAction("jump", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -183,6 +204,7 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
     private readonly InputAction m_mainGunControllsright_reloadright;
     private readonly InputAction m_mainGunControllsright_shootleft;
     private readonly InputAction m_mainGunControllsright_relodeleft;
+    private readonly InputAction m_mainGunControllsright_jump;
     public struct MainGunControllsrightActions
     {
         private @gunControlls m_Wrapper;
@@ -191,6 +213,7 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         public InputAction @reloadright => m_Wrapper.m_mainGunControllsright_reloadright;
         public InputAction @shootleft => m_Wrapper.m_mainGunControllsright_shootleft;
         public InputAction @relodeleft => m_Wrapper.m_mainGunControllsright_relodeleft;
+        public InputAction @jump => m_Wrapper.m_mainGunControllsright_jump;
         public InputActionMap Get() { return m_Wrapper.m_mainGunControllsright; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -212,6 +235,9 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 @relodeleft.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnRelodeleft;
                 @relodeleft.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnRelodeleft;
                 @relodeleft.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnRelodeleft;
+                @jump.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnJump;
+                @jump.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnJump;
+                @jump.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnJump;
             }
             m_Wrapper.m_MainGunControllsrightActionsCallbackInterface = instance;
             if (instance != null)
@@ -228,6 +254,9 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 @relodeleft.started += instance.OnRelodeleft;
                 @relodeleft.performed += instance.OnRelodeleft;
                 @relodeleft.canceled += instance.OnRelodeleft;
+                @jump.started += instance.OnJump;
+                @jump.performed += instance.OnJump;
+                @jump.canceled += instance.OnJump;
             }
         }
     }
@@ -238,5 +267,6 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         void OnReloadright(InputAction.CallbackContext context);
         void OnShootleft(InputAction.CallbackContext context);
         void OnRelodeleft(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
     }
 }
