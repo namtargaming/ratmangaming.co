@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2323825827872376465}
   - component: {fileID: 5881455229792227467}
   - component: {fileID: 1863354259485456887}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 6004498259723358018}
   - component: {fileID: 2536950225075068485}
   - component: {fileID: 2543858423486589942}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6702048541607031563}
   - component: {fileID: 6134533664344542798}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: bulletCasing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -259,7 +259,7 @@ GameObject:
   - component: {fileID: 1321840315424822231}
   - component: {fileID: 8101351083850709146}
   - component: {fileID: 241253102163083452}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
