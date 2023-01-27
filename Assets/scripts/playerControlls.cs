@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 
 public class playerControlls : MonoBehaviour
@@ -22,6 +23,10 @@ public class playerControlls : MonoBehaviour
      if (collision.gameObject.tag == "florr")
      {
         OnFloor = true;
+     }
+     if(collision.gameObject.tag == ("enime"))
+     {
+        SceneManager.LoadScene("main");  
      }
     }
     private void OnEnable() {
@@ -56,4 +61,5 @@ public class playerControlls : MonoBehaviour
 //    public void slide() {
 //
 //    }
+
 }
