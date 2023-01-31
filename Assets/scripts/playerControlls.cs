@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 public class playerControlls : MonoBehaviour
 {
     public int JumpHight = 10;
+    public int health = 10;
     public bool OnFloor = true;
     private Rigidbody player;
     [SerializeField]
@@ -15,7 +16,6 @@ public class playerControlls : MonoBehaviour
 
     private void Start() {
         player = GetComponent<Rigidbody>();
-        Debug.Log("start");
     }
 
     void OnCollisionEnter(Collision collision)
@@ -26,23 +26,26 @@ public class playerControlls : MonoBehaviour
      }
      if(collision.gameObject.tag == ("enime"))
      {
-        SceneManager.LoadScene("main");  
+        health -= 1; 
      }
     }
     private void OnEnable() {
         jumpButoon.action.performed += jumping;
-        Debug.Log("onenable");
     }
     
     private void OnDisable() {
         jumpButoon.action.performed -= jumping;
-        Debug.Log("ondisable");
+    }
+
+    private void Update() {
+        if(health <= 0){
+            die();
+        }
     }
 
     private void jumping(InputAction.CallbackContext obj){
         if(OnFloor){
             jump();
-          Debug.Log("called jump");
         }
     }
 
@@ -54,7 +57,6 @@ public class playerControlls : MonoBehaviour
 
     public void jump() {
         player.AddForce(0,JumpHight,0);
-        Debug.Log("jumping");
         OnFloor = false;
     }
 
@@ -62,4 +64,7 @@ public class playerControlls : MonoBehaviour
 //
 //    }
 
+    public void die(){
+        SceneManager.LoadScene("main");
+    }
 }
