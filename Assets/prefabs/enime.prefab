@@ -48,8 +48,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  topSpeed: 0
-  followSpeed: 10
+  topSpeed: 1000
+  followSpeed: 200
   Enime: {fileID: 3797958505162345376}
 --- !u!54 &3797958505162345376
 Rigidbody:

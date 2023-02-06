@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI; 
+
 
 
 public class enime : MonoBehaviour
@@ -20,21 +20,17 @@ public class enime : MonoBehaviour
     void Start()
     {
     //    Enime = GetComponent<Rigidbody>();
-        velosity = Enime.velocity.x * Enime.velocity.y * Enime.velocity.z / 3; 
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(velosity);
-        //Debug.Log(Enime.velocity.x);
-        //Debug.Log(Enime.velocity.z);
-        //Debug.Log(Enime.velocity.y);
-//
-        //transform.LookAt(player.position);
-        //if(velosity <= topSpeed){
-        //Enime.AddForce(transform.rotation * new Vector3(0,0,followSpeed));
-        }
+        velosity = Enime.velocity.magnitude;
+        Debug.Log(velosity);
+        transform.LookAt(player.position);
+        if(velosity <= topSpeed ){
+        Enime.AddForce(transform.rotation * new Vector3(0,0,followSpeed));
+       }
     }
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == ("playerBullet")){
