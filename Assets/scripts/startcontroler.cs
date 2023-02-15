@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class startcontroler : MonoBehaviour
 {   
+
+    public bool hovoring = false;
     [SerializeField]
     private InputActionReference startbutton;
     // Start is called before the first frame update
@@ -17,6 +19,15 @@ public class startcontroler : MonoBehaviour
         startbutton.action.performed -= startGame;
     }
     private void startGame(InputAction.CallbackContext obj){
-        SceneManager.LoadScene("SampleScene"); 
+        if (hovoring == true){
+            SceneManager.LoadScene("SampleScene"); 
+        }
     }
+    public void hooving(){
+        hovoring = true;
+    }
+    public void nothooving(){
+        hovoring = false;
+    }
+
 }
