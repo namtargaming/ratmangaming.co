@@ -12,9 +12,16 @@ public class gunScript : MonoBehaviour
     public GameObject bullet;
     public GameObject bulletCasing;
     private Quaternion rotation;
+    private Animator anim;
+    private AudioSource audioData;
+    public AudioClip ShootSound;
     [SerializeField]
     private InputActionReference Shootbutton, reloadbutton;
 
+    private void Start() {
+        anim = GetComponent<Animator>();
+        audioData = GetComponent<AudioSource>();
+    }
     private void Update() {
         rotation = transform.rotation * Quaternion.AngleAxis(90, Vector3.right);
     }
@@ -32,6 +39,8 @@ public class gunScript : MonoBehaviour
     private void ShootGun(InputAction.CallbackContext obj){
         if(amo >= 0){
             shoot();
+            anim.Play("Base Layer.Scene", 0 ,0.0f);
+            audioData.PlayOneShot(ShootSound,1.0f);
       }
     }
 
