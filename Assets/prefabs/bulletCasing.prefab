@@ -207,6 +207,7 @@ GameObject:
   - component: {fileID: 6702048541607031563}
   - component: {fileID: 6134533664344542798}
   - component: {fileID: 3635677767678803128}
+  - component: {fileID: 288391642616584647}
   m_Layer: 6
   m_Name: bulletCasing
   m_TagString: Untagged
@@ -262,6 +263,20 @@ CapsuleCollider:
   m_Height: 2.0910165
   m_Direction: 1
   m_Center: {x: 0, y: -0.21015787, z: 0}
+--- !u!114 &288391642616584647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5001233927931444893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f637185a97d0e5498a009013da7bf9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletshellspeed: 179
+  bulletshellLifeTime: 10
 --- !u!1 &8278423725650702487
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,7 +26,6 @@ public class enime : MonoBehaviour
     void Update()
     {
         velosity = Enime.velocity.magnitude;
-        Debug.Log(velosity);
         transform.LookAt(player.position);
         if(velosity <= topSpeed){
         Enime.AddForce(transform.rotation * new Vector3(0,0,followSpeed));

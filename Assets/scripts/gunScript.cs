@@ -15,6 +15,7 @@ public class gunScript : MonoBehaviour
     private Animator anim;
     private AudioSource audioData;
     public AudioClip ShootSound;
+    public AudioClip ReloadSound;
     [SerializeField]
     private InputActionReference Shootbutton, reloadbutton;
 
@@ -39,13 +40,11 @@ public class gunScript : MonoBehaviour
     private void ShootGun(InputAction.CallbackContext obj){
         if(amo >= 0){
             shoot();
-            anim.Play("Base Layer.Scene", 0 ,0.0f);
-            audioData.PlayOneShot(ShootSound,1.0f);
       }
     }
 
     private void reloadGun(InputAction.CallbackContext obj){
-        if(amo <= 10){
+        if(amo <= 17){
             relode();
         }
     }
@@ -53,10 +52,14 @@ public class gunScript : MonoBehaviour
     public void shoot() {
     Instantiate(bullet, transform.position, rotation);
     Instantiate(bulletCasing, transform.position + new Vector3(0,1,0) * 0.05f, rotation);
+    anim.Play("Base Layer.Scene", 0 ,0.0f);
+    audioData.PlayOneShot(ShootSound,1.0f);
     amo -= 1;
     }
 
     public void relode() {
+        audioData.PlayOneShot(ReloadSound,1.0f);
+        anim.Play("Base Layer.gun flip", 0 ,0.0f);
         amo = 17;
     }
 }
