@@ -38,9 +38,10 @@ public class gunScript : MonoBehaviour
     }
 
     private void ShootGun(InputAction.CallbackContext obj){
-        if(amo >= 0){
+        if(amo >= 0) 
+        {
             shoot();
-      }
+        }
     }
 
     private void reloadGun(InputAction.CallbackContext obj){
@@ -62,4 +63,5 @@ public class gunScript : MonoBehaviour
         anim.Play("Base Layer.gun flip", 0 ,0.0f);
         amo = 17;
     }
+
 }
