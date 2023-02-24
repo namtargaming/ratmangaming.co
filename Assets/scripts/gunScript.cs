@@ -51,7 +51,7 @@ public class gunScript : MonoBehaviour
     }
 
     public void shoot() {
-    Instantiate(bullet, transform.position, rotation);
+    Instantiate(bullet, new Vector3(transform.position.x , transform.position.y + 0.0489f,transform.position.z), rotation);
     Instantiate(bulletCasing, transform.position + new Vector3(0,1,0) * 0.05f, rotation);
     anim.Play("Base Layer.Scene", 0 ,0.0f);
     audioData.PlayOneShot(ShootSound,1.0f);
