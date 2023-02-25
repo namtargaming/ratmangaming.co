@@ -4422,6 +4422,11 @@ PrefabInstance:
       propertyPath: m_HorizontalAlignment
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 3260840354256961888, guid: ceb51d06cb06c2948b0a3db64d124abb,
+        type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3260840354256961890, guid: ceb51d06cb06c2948b0a3db64d124abb,
         type: 3}
       propertyPath: m_RootOrder
@@ -4475,6 +4480,11 @@ PrefabInstance:
     - target: {fileID: 3260840354256961890, guid: ceb51d06cb06c2948b0a3db64d124abb,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260840354256961891, guid: ceb51d06cb06c2948b0a3db64d124abb,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3260840354256961903, guid: ceb51d06cb06c2948b0a3db64d124abb,

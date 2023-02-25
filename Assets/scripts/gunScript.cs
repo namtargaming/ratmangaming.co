@@ -16,6 +16,7 @@ public class gunScript : MonoBehaviour
     private AudioSource audioData;
     public AudioClip ShootSound;
     public AudioClip ReloadSound;
+    public LineRenderer Line;
     [SerializeField]
     private InputActionReference Shootbutton, reloadbutton;
 
@@ -25,6 +26,16 @@ public class gunScript : MonoBehaviour
     }
     private void Update() {
         rotation = transform.rotation * Quaternion.AngleAxis(90, Vector3.right);
+        Line.SetPosition(0, transform.position + transform.forward*0.1f);
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, transform.forward, out hit))
+        {
+            if (hit.collider)
+            {
+                Line.SetPosition(1, hit.point);
+            }
+        }
+        else Line.SetPosition(1, transform.forward*500000);
     }
 
     private void OnEnable() {
