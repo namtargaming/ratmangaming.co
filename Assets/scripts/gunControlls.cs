@@ -71,6 +71,15 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""leftStick"",
+                    ""type"": ""Button"",
+                    ""id"": ""e9ec4f8a-397a-4036-ac62-6b1bd58866cc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -128,6 +137,17 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                     ""action"": ""jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5cd2189a-87fa-4ba0-8037-90caf5d21ec5"",
+                    ""path"": ""<XRController>{LeftHand}/isTracked"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""leftStick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -141,6 +161,7 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         m_mainGunControllsright_shootleft = m_mainGunControllsright.FindAction("shoot(left)", throwIfNotFound: true);
         m_mainGunControllsright_relodeleft = m_mainGunControllsright.FindAction("relode(left)", throwIfNotFound: true);
         m_mainGunControllsright_jump = m_mainGunControllsright.FindAction("jump", throwIfNotFound: true);
+        m_mainGunControllsright_leftStick = m_mainGunControllsright.FindAction("leftStick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,6 +226,7 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
     private readonly InputAction m_mainGunControllsright_shootleft;
     private readonly InputAction m_mainGunControllsright_relodeleft;
     private readonly InputAction m_mainGunControllsright_jump;
+    private readonly InputAction m_mainGunControllsright_leftStick;
     public struct MainGunControllsrightActions
     {
         private @gunControlls m_Wrapper;
@@ -214,6 +236,7 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         public InputAction @shootleft => m_Wrapper.m_mainGunControllsright_shootleft;
         public InputAction @relodeleft => m_Wrapper.m_mainGunControllsright_relodeleft;
         public InputAction @jump => m_Wrapper.m_mainGunControllsright_jump;
+        public InputAction @leftStick => m_Wrapper.m_mainGunControllsright_leftStick;
         public InputActionMap Get() { return m_Wrapper.m_mainGunControllsright; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -238,6 +261,9 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 @jump.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnJump;
                 @jump.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnJump;
                 @jump.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnJump;
+                @leftStick.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnLeftStick;
+                @leftStick.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnLeftStick;
+                @leftStick.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnLeftStick;
             }
             m_Wrapper.m_MainGunControllsrightActionsCallbackInterface = instance;
             if (instance != null)
@@ -257,6 +283,9 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 @jump.started += instance.OnJump;
                 @jump.performed += instance.OnJump;
                 @jump.canceled += instance.OnJump;
+                @leftStick.started += instance.OnLeftStick;
+                @leftStick.performed += instance.OnLeftStick;
+                @leftStick.canceled += instance.OnLeftStick;
             }
         }
     }
@@ -268,5 +297,6 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         void OnShootleft(InputAction.CallbackContext context);
         void OnRelodeleft(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
+        void OnLeftStick(InputAction.CallbackContext context);
     }
 }

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3260840354256961890}
   - component: {fileID: 3260840354256961901}
   - component: {fileID: 3260840354256961900}
-  - component: {fileID: 3260840354256961891}
   - component: {fileID: 3260840354256961888}
   - component: {fileID: 3260840354256961889}
   - component: {fileID: 3260840354256961894}
@@ -69,20 +68,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_ActionAssets:
   - {fileID: -944628639613478452, guid: c348712bda248c246b8c49b3db54643f, type: 3}
---- !u!136 &3260840354256961891
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3260840354256961903}
-  m_Material: {fileID: 13400000, guid: 5346137085d3f3643b2dd82e6a4009ee, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 1.7491008
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.9006607, z: 0}
 --- !u!54 &3260840354256961888
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -115,6 +100,8 @@ MonoBehaviour:
   health: 10
   OnFloor: 1
   jumpButoon: {fileID: 2137808302625966374, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
+    type: 3}
+  LeftJoystick: {fileID: -2189576138408252134, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
     type: 3}
 --- !u!114 &3260840354256961894
 MonoBehaviour:
@@ -175,7 +162,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260840354999079987}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -756,7 +743,6 @@ GameObject:
   - component: {fileID: 3260840355683483520}
   - component: {fileID: 3260840355683483523}
   - component: {fileID: 3260840355683483527}
-  - component: {fileID: 3260840355683483524}
   m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -771,7 +757,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260840355683483533}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -859,23 +845,7 @@ MonoBehaviour:
       m_Id: 2a7730d8-f479-4bf8-aba3-ad1802961e97
       m_Processors: 
       m_Interactions: 
-      m_SingletonActionBindings:
-      - m_Name: 
-        m_Id: 8f2f2f54-ff2b-42f6-88e0-ea193b7616f7
-        m_Path: <XRHMD>/centerEyePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position
-        m_Flags: 0
-      - m_Name: 
-        m_Id: 7d2fea48-ec3b-44e4-b519-aaa186e71caf
-        m_Path: <HandheldARInputDevice>/devicePosition
-        m_Interactions: 
-        m_Processors: 
-        m_Groups: 
-        m_Action: Position
-        m_Flags: 0
+      m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 0}
   m_RotationInput:
@@ -933,20 +903,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260840355683483533}
   m_CullTransparentMesh: 1
---- !u!136 &3260840355683483524
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3260840355683483533}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 0
-  m_Radius: 0.5
-  m_Height: 1.5964286
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.29821432, z: 0}
 --- !u!1 &3260840356011588625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1009,7 +965,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3260840356235266219}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1615,7 +1571,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8761113440809557403}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 5346137085d3f3643b2dd82e6a4009ee, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5

@@ -7,12 +7,12 @@ using UnityEngine.SceneManagement;
 
 public class playerControlls : MonoBehaviour
 {
-    public int JumpHight = 10;
-    public int health = 10;
+    public int JumpHight;
+    public int health;
     public bool OnFloor = true;
     private Rigidbody player;
     [SerializeField]
-    private InputActionReference jumpButoon;
+    private InputActionReference jumpButoon, LeftJoystick;
 
     private void Start() {
         player = GetComponent<Rigidbody>();
@@ -38,6 +38,9 @@ public class playerControlls : MonoBehaviour
     }
 
     private void Update() {
+
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
+
         if(health <= 0){
             die();
         }
