@@ -20,7 +20,7 @@ public class startcontroler : MonoBehaviour
     }
     private void startGame(InputAction.CallbackContext obj){
         if (hovoring == true){
-            SceneManager.LoadScene("SampleScene"); 
+            SceneManager.LoadScene("gameArina"); 
         }
     }
     public void hooving(){

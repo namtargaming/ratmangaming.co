@@ -73,13 +73,22 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""leftStick"",
-                    ""type"": ""Button"",
-                    ""id"": ""e9ec4f8a-397a-4036-ac62-6b1bd58866cc"",
-                    ""expectedControlType"": ""Button"",
+                    ""name"": ""RightJoystick"",
+                    ""type"": ""Value"",
+                    ""id"": ""4c1856a3-3951-4e4e-b965-49f9bc21992b"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
-                    ""initialStateCheck"": false
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""leftJoystick"",
+                    ""type"": ""Value"",
+                    ""id"": ""01385bfc-eea3-42be-a5f3-8aa3131137d4"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -140,12 +149,23 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""5cd2189a-87fa-4ba0-8037-90caf5d21ec5"",
-                    ""path"": ""<XRController>{LeftHand}/isTracked"",
+                    ""id"": ""6dc4e703-f5e2-4158-be3a-a276d136074a"",
+                    ""path"": ""<XRController>{RightHand}/joystick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""leftStick"",
+                    ""action"": ""RightJoystick"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f8ed2cfb-5243-4b5a-82c1-e69992eb53bf"",
+                    ""path"": ""<XRController>{LeftHand}/joystick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""leftJoystick"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -161,7 +181,8 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         m_mainGunControllsright_shootleft = m_mainGunControllsright.FindAction("shoot(left)", throwIfNotFound: true);
         m_mainGunControllsright_relodeleft = m_mainGunControllsright.FindAction("relode(left)", throwIfNotFound: true);
         m_mainGunControllsright_jump = m_mainGunControllsright.FindAction("jump", throwIfNotFound: true);
-        m_mainGunControllsright_leftStick = m_mainGunControllsright.FindAction("leftStick", throwIfNotFound: true);
+        m_mainGunControllsright_RightJoystick = m_mainGunControllsright.FindAction("RightJoystick", throwIfNotFound: true);
+        m_mainGunControllsright_leftJoystick = m_mainGunControllsright.FindAction("leftJoystick", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -226,7 +247,8 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
     private readonly InputAction m_mainGunControllsright_shootleft;
     private readonly InputAction m_mainGunControllsright_relodeleft;
     private readonly InputAction m_mainGunControllsright_jump;
-    private readonly InputAction m_mainGunControllsright_leftStick;
+    private readonly InputAction m_mainGunControllsright_RightJoystick;
+    private readonly InputAction m_mainGunControllsright_leftJoystick;
     public struct MainGunControllsrightActions
     {
         private @gunControlls m_Wrapper;
@@ -236,7 +258,8 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         public InputAction @shootleft => m_Wrapper.m_mainGunControllsright_shootleft;
         public InputAction @relodeleft => m_Wrapper.m_mainGunControllsright_relodeleft;
         public InputAction @jump => m_Wrapper.m_mainGunControllsright_jump;
-        public InputAction @leftStick => m_Wrapper.m_mainGunControllsright_leftStick;
+        public InputAction @RightJoystick => m_Wrapper.m_mainGunControllsright_RightJoystick;
+        public InputAction @leftJoystick => m_Wrapper.m_mainGunControllsright_leftJoystick;
         public InputActionMap Get() { return m_Wrapper.m_mainGunControllsright; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -261,9 +284,12 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 @jump.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnJump;
                 @jump.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnJump;
                 @jump.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnJump;
-                @leftStick.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnLeftStick;
-                @leftStick.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnLeftStick;
-                @leftStick.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnLeftStick;
+                @RightJoystick.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnRightJoystick;
+                @RightJoystick.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnRightJoystick;
+                @RightJoystick.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnRightJoystick;
+                @leftJoystick.started -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnLeftJoystick;
+                @leftJoystick.performed -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnLeftJoystick;
+                @leftJoystick.canceled -= m_Wrapper.m_MainGunControllsrightActionsCallbackInterface.OnLeftJoystick;
             }
             m_Wrapper.m_MainGunControllsrightActionsCallbackInterface = instance;
             if (instance != null)
@@ -283,9 +309,12 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 @jump.started += instance.OnJump;
                 @jump.performed += instance.OnJump;
                 @jump.canceled += instance.OnJump;
-                @leftStick.started += instance.OnLeftStick;
-                @leftStick.performed += instance.OnLeftStick;
-                @leftStick.canceled += instance.OnLeftStick;
+                @RightJoystick.started += instance.OnRightJoystick;
+                @RightJoystick.performed += instance.OnRightJoystick;
+                @RightJoystick.canceled += instance.OnRightJoystick;
+                @leftJoystick.started += instance.OnLeftJoystick;
+                @leftJoystick.performed += instance.OnLeftJoystick;
+                @leftJoystick.canceled += instance.OnLeftJoystick;
             }
         }
     }
@@ -297,6 +326,7 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
         void OnShootleft(InputAction.CallbackContext context);
         void OnRelodeleft(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnLeftStick(InputAction.CallbackContext context);
+        void OnRightJoystick(InputAction.CallbackContext context);
+        void OnLeftJoystick(InputAction.CallbackContext context);
     }
 }

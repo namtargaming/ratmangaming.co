@@ -5,14 +5,21 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
-public class playerControlls : MonoBehaviour
-{
+public class newPlayerControlls : MonoBehaviour
+{   
+    public Transform camera;
+    public int moveSpeed;
     public int JumpHight;
+    public int hightOfPlayer;
     public int health;
-    public bool OnFloor = true;
+    private bool OnFloor;
     private Rigidbody player;
+    public LayerMask whatIsGround;
+    private Vector2 joystickInput;
+    private Vector3 movement;
+    private Vector3 movementAngle;
     [SerializeField]
-    private InputActionReference jumpButoon, LeftJoystick;
+    private InputActionReference jumpButoon, leftJoystick;
 
     private void Start() {
         player = GetComponent<Rigidbody>();
@@ -20,10 +27,6 @@ public class playerControlls : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-     if (collision.gameObject.tag == "florr")
-     {
-        OnFloor = true;
-     }
      if(collision.gameObject.tag == ("enime"))
      {
         health -= 1; 
@@ -38,12 +41,16 @@ public class playerControlls : MonoBehaviour
     }
 
     private void Update() {
-
-        //grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.3f, whatIsGround);
-
+        joystickInput = leftJoystick.action.ReadValue<Vector2>();
+        OnFloor = Physics.Raycast(transform.position + new Vector3(0,1,0), Vector3.down, hightOfPlayer, whatIsGround);
+        movement = camera.forward * joystickInput.y + camera.right * joystickInput.x;
+        
         if(health <= 0){
             die();
         }
+    }
+    private void FixedUpdate() {
+        moveplayer(movement);
     }
 
     private void jumping(InputAction.CallbackContext obj){
@@ -60,7 +67,10 @@ public class playerControlls : MonoBehaviour
 
     public void jump() {
         player.AddForce(0,JumpHight,0);
-        OnFloor = false;
+    }
+
+    public void moveplayer(Vector3 joysticInput) {
+        player.AddForce(joysticInput * moveSpeed);
     }
 
 //    public void slide() {

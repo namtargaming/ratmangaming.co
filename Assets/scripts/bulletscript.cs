@@ -8,26 +8,28 @@ public class bulletscript : MonoBehaviour{
     public int bulletspeed = 100;
     public float bulletLifeTime = 10.0f;
     private float I = 1.0f;
-    private GameObject Player;
-    private Rigidbody PlayerRgidbody;
+    //private GameObject Player;
+    
+    //private Rigidbody PlayerRgidbody;
     private Vector3 bulletVelosity;
-    private Vector3 corectPlayerVelosity;
+    //private Vector3 corectPlayerVelosity;
+
     // Start is called before the first frame update
     void Start()
     {
-        Player = GameObject.Find("/player");
+        //Player = GameObject.Find("/player");
 
         bullet = GetComponent<Rigidbody>();
 
-        PlayerRgidbody = Player.GetComponent<Rigidbody>();
+       //PlayerRgidbody = Player.GetComponent<Rigidbody>();
 
-        corectPlayerVelosity = new Vector3(PlayerRgidbody.velocity.x, PlayerRgidbody.velocity.z, PlayerRgidbody.velocity.y * -1 ) * 49.9f;
+        //corectPlayerVelosity = new Vector3(PlayerRgidbody.velocity.x, PlayerRgidbody.velocity.z, PlayerRgidbody.velocity.y * -1 ) * 49.9f;
 
-        bulletVelosity = new Vector3(0,bulletspeed,0) + corectPlayerVelosity;
+        bulletVelosity = new Vector3(0,bulletspeed,0); //+ corectPlayerVelosity;
 
         bullet.AddForce(transform.rotation * bulletVelosity);
 
-        Debug.Log(PlayerRgidbody.velocity);
+        //Debug.Log(PlayerRgidbody.velocity);
 
     }
     // Update is called once per frame
