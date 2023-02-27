@@ -18,6 +18,8 @@ public class newPlayerControlls : MonoBehaviour
     private Vector2 joystickInput;
     private Vector3 movement;
     private Vector3 movementAngle;
+    private Vector3 camreaForward2d;
+    private Vector3 camreaRight2d;
     [SerializeField]
     private InputActionReference jumpButoon, leftJoystick;
 
@@ -41,9 +43,11 @@ public class newPlayerControlls : MonoBehaviour
     }
 
     private void Update() {
+        camreaForward2d = new Vector3(camera.forward.x, 0.0f, camera.forward.z); 
+        camreaRight2d = new Vector3(camera.right.x, 0.0f, camera.right.z); 
         joystickInput = leftJoystick.action.ReadValue<Vector2>();
         OnFloor = Physics.Raycast(transform.position + new Vector3(0,1,0), Vector3.down, hightOfPlayer, whatIsGround);
-        movement = camera.forward * joystickInput.y + camera.right * joystickInput.x;
+        movement = camreaForward2d * joystickInput.y + camreaRight2d * joystickInput.x;
         
         if(health <= 0){
             die();
