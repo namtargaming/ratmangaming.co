@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 
 public class newPlayerControlls : MonoBehaviour
-{   
+{      
+    public int slideTime;
     public Transform camera;
     public int moveSpeed;
     public int speedLimit;
@@ -24,8 +25,9 @@ public class newPlayerControlls : MonoBehaviour
     private Vector3 movementAngle;
     private Vector3 camreaForward2d;
     private Vector3 camreaRight2d;
+    public physicMaterial phisucsMatersl;
     [SerializeField]
-    private InputActionReference jumpButoon, leftJoystick, rightJoystick;
+    private InputActionReference jumpButoon, leftJoystick, rightJoystick, slideButoon;
 
     private void Start() {
         player = GetComponent<Rigidbody>();
@@ -40,10 +42,12 @@ public class newPlayerControlls : MonoBehaviour
     }
     private void OnEnable() {
         jumpButoon.action.performed += jumping;
+        slideButoon.action.performed += slide;
     }
     
     private void OnDisable() {
         jumpButoon.action.performed -= jumping;
+        slideButoon.action.performed -= slide;
     }
 
     private void Update() {
@@ -70,11 +74,11 @@ public class newPlayerControlls : MonoBehaviour
         }
     }
 
-//    private void slide(InputAction.CallbackContext obj){
-//        if(OnFloor){
-//
-//        }
-//    }
+    private void slide(InputAction.CallbackContext obj){
+        if(OnFloor){
+           slide(); 
+        }
+    }
 
     public void jump(int hight) {
         player.AddForce(0,hight,0);
@@ -87,14 +91,14 @@ public class newPlayerControlls : MonoBehaviour
         transform.RotateAround(camera.position, new Vector3(0,1,0), joysticInput.x * 0.1f * rotateSpeed);
     }
 
-//    public void slide() {
-//
-//    }
+    public void slide() {
+        
+    }
+
     private void SpeedControl()
     {
         Vector3 flatVel = new Vector3(player.velocity.x, 0f, player.velocity.z);
 
-        // limit velocity if needed
         if(flatVel.magnitude > speedLimit)
         {
             Vector3 limitedVel = flatVel.normalized * speedLimit;

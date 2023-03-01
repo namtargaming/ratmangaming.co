@@ -9506,6 +9506,8 @@ MonoBehaviour:
     type: 3}
   rightJoystick: {fileID: -3362921411706673702, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
     type: 3}
+  slideButoon: {fileID: -846624486165633086, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
+    type: 3}
 --- !u!114 &589984453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32761,9 +32763,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 1.6803403
+  m_Height: 1.7
   m_Direction: 1
-  m_Center: {x: 0, y: 0.84, z: 0}
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!1 &5760303672318279166
 GameObject:
   m_ObjectHideFlags: 0
