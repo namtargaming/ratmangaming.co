@@ -9,12 +9,15 @@ public class newPlayerControlls : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 {      
     [Header("player Things")]
     public int health;
     [Header("Movemietn things")]
     private int moveSpeed = 90;
 =======
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
 =======
@@ -48,8 +51,11 @@ public class newPlayerControlls : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Animator anim;
     
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
 =======
@@ -76,7 +82,10 @@ public class newPlayerControlls : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         slideButoon.action.performed += slideing;
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
 =======
@@ -90,7 +99,10 @@ public class newPlayerControlls : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         slideButoon.action.performed -= slideing;
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
 =======
@@ -132,6 +144,7 @@ public class newPlayerControlls : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void slideing(InputAction.CallbackContext obj){
         if(OnFloor){
            slide(true,slideTime); 
@@ -145,6 +158,8 @@ public class newPlayerControlls : MonoBehaviour
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 //    private void slide(InputAction.CallbackContext obj){
 //        if(OnFloor){
 //
@@ -152,6 +167,9 @@ public class newPlayerControlls : MonoBehaviour
 //    }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 28169a78 (start slideing)
+=======
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
@@ -169,6 +187,7 @@ public class newPlayerControlls : MonoBehaviour
         transform.RotateAround(camera.position, new Vector3(0,1,0), joysticInput.x * 0.1f * rotateSpeed);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -194,6 +213,11 @@ public class newPlayerControlls : MonoBehaviour
     }
     
 
+=======
+//    public void slide() {
+//
+//    }
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 //    public void slide() {
 //
