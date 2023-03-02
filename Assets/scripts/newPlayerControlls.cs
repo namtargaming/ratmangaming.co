@@ -7,34 +7,43 @@ using UnityEngine.SceneManagement;
 
 public class newPlayerControlls : MonoBehaviour
 {      
-    public int slideTime;
-    public Transform camera;
-    public int moveSpeed;
+    [Header("player Things")]
+    public int health;
+    [Header("Movemietn things")]
+    private int moveSpeed = 100;
     public int speedLimit;
-    public int rotateSpeed;
+    private int rotateSpeed = 30;
+    [Header("Jumping")]
     public int JumpHight;
     public float hightOfPlayer;
-    public int health;
-    private bool OnFloor;
-    private Rigidbody player;
+    [Header("Slideing")]
+    public float slideTime;
+    public float slideHight;
+    [Header("GameObjects")]
+    public Transform camera;
     public CapsuleCollider playerColishon;
     public LayerMask whatIsGround;
+    public PhysicMaterial phisucsMatersl;
+    
+    private bool OnFloor;
+    private Rigidbody player;
     private Vector2 joystickInput;
     private Vector2 rightJoystickInput;
     private Vector3 movement;
     private Vector3 movementAngle;
     private Vector3 camreaForward2d;
     private Vector3 camreaRight2d;
-    public physicMaterial phisucsMatersl;
+    private Animator anim;
+    
     [SerializeField]
     private InputActionReference jumpButoon, leftJoystick, rightJoystick, slideButoon;
 
     private void Start() {
+        anim = GetComponent<Animator>();
         player = GetComponent<Rigidbody>();
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
+    void OnCollisionEnter(Collision collision){
      if(collision.gameObject.tag == ("enime"))
      {
         health -= 1; 
@@ -42,12 +51,12 @@ public class newPlayerControlls : MonoBehaviour
     }
     private void OnEnable() {
         jumpButoon.action.performed += jumping;
-        slideButoon.action.performed += slide;
+        slideButoon.action.performed += slideing;
     }
     
     private void OnDisable() {
         jumpButoon.action.performed -= jumping;
-        slideButoon.action.performed -= slide;
+        slideButoon.action.performed -= slideing;
     }
 
     private void Update() {
@@ -62,6 +71,13 @@ public class newPlayerControlls : MonoBehaviour
         if(health <= 0){
             die();
         }
+        if(OnFloor == false){
+            moveSpeed =  500;
+        }
+        if(OnFloor == true){
+            moveSpeed = 1000;
+        }
+        Debug.Log(moveSpeed);
     }
     private void FixedUpdate() {
         moveplayer(movement);
@@ -74,10 +90,13 @@ public class newPlayerControlls : MonoBehaviour
         }
     }
 
-    private void slide(InputAction.CallbackContext obj){
+    private void slideing(InputAction.CallbackContext obj){
         if(OnFloor){
-           slide(); 
+           slide(true,slideTime); 
         }
+    }
+    private void stopslide(InputAction.CallbackContext obj){
+        slide(false,slideTime); 
     }
 
     public void jump(int hight) {
@@ -91,9 +110,27 @@ public class newPlayerControlls : MonoBehaviour
         transform.RotateAround(camera.position, new Vector3(0,1,0), joysticInput.x * 0.1f * rotateSpeed);
     }
 
-    public void slide() {
-        
+    public void slide(bool StartStop, float time) {
+        if(StartStop){
+            //anim.Play("Base Layer.Sliding", 0 ,0.0f);
+            if(time <= slideTime){
+                //phisucsMatersl.dynamicFriction = 0;
+                //rotateSpeed = 0;
+                //slideTime += 1 * TimeDelta.Time;
+                Debug.Log("sart");
+            }
+            else if(time >= slideTime){
+                //phisucsMatersl.dynamicFriction = 3;
+                //rotateSpeed = 30;
+                Debug.Log("stop time");
+            }
+        }
+        else if(StartStop == false){
+            //anim.Play("Base Layer.StopSliding", 0 ,0.0f);
+            Debug.Log("stop");
+        }
     }
+    
 
     private void SpeedControl()
     {
