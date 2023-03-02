@@ -7,12 +7,15 @@ using UnityEngine.SceneManagement;
 
 public class newPlayerControlls : MonoBehaviour
 <<<<<<< HEAD
+<<<<<<< HEAD
 {      
     [Header("player Things")]
     public int health;
     [Header("Movemietn things")]
     private int moveSpeed = 100;
 =======
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 {   
     public Transform camera;
     public int moveSpeed;
@@ -40,8 +43,11 @@ public class newPlayerControlls : MonoBehaviour
     private Vector3 camreaForward2d;
     private Vector3 camreaRight2d;
 <<<<<<< HEAD
+<<<<<<< HEAD
     private Animator anim;
     
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
     [SerializeField]
@@ -61,7 +67,10 @@ public class newPlayerControlls : MonoBehaviour
     private void OnEnable() {
         jumpButoon.action.performed += jumping;
 <<<<<<< HEAD
+<<<<<<< HEAD
         slideButoon.action.performed += slideing;
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
     }
@@ -69,7 +78,10 @@ public class newPlayerControlls : MonoBehaviour
     private void OnDisable() {
         jumpButoon.action.performed -= jumping;
 <<<<<<< HEAD
+<<<<<<< HEAD
         slideButoon.action.performed -= slideing;
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
     }
@@ -106,6 +118,7 @@ public class newPlayerControlls : MonoBehaviour
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void slideing(InputAction.CallbackContext obj){
         if(OnFloor){
            slide(true,slideTime); 
@@ -115,11 +128,16 @@ public class newPlayerControlls : MonoBehaviour
         slide(false,slideTime); 
     }
 =======
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 //    private void slide(InputAction.CallbackContext obj){
 //        if(OnFloor){
 //
 //        }
 //    }
+<<<<<<< HEAD
+>>>>>>> parent of 28169a78 (start slideing)
+=======
 >>>>>>> parent of 28169a78 (start slideing)
 
     public void jump(int hight) {
@@ -133,6 +151,7 @@ public class newPlayerControlls : MonoBehaviour
         transform.RotateAround(camera.position, new Vector3(0,1,0), joysticInput.x * 0.1f * rotateSpeed);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     public void slide(bool StartStop, float time) {
         if(StartStop){
@@ -156,6 +175,11 @@ public class newPlayerControlls : MonoBehaviour
     }
     
 
+=======
+//    public void slide() {
+//
+//    }
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 //    public void slide() {
 //
