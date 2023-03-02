@@ -121,7 +121,11 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 100
+=======
+  controlID: 53
+>>>>>>> parent of 28169a78 (start slideing)
 =======
   controlID: 53
 >>>>>>> parent of 28169a78 (start slideing)
@@ -154,7 +158,11 @@ MonoBehaviour:
   vertical: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 101
+=======
+  controlID: 54
+>>>>>>> parent of 28169a78 (start slideing)
 =======
   controlID: 54
 >>>>>>> parent of 28169a78 (start slideing)
@@ -187,7 +195,11 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 102
+=======
+  controlID: 55
+>>>>>>> parent of 28169a78 (start slideing)
 =======
   controlID: 55
 >>>>>>> parent of 28169a78 (start slideing)
@@ -271,6 +283,9 @@ MonoBehaviour:
 =======
     height: 297
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 28169a78 (start slideing)
+=======
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
@@ -345,7 +360,11 @@ MonoBehaviour:
       m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ExpandedIDs: 16d0ffff32fbffff88630000
+=======
+      m_ExpandedIDs: 2efbffff3062000028630000846300008863000092630000c4630000ca630000d2630000ec630000
+>>>>>>> parent of 28169a78 (start slideing)
 =======
       m_ExpandedIDs: 2efbffff3062000028630000846300008863000092630000c4630000ca630000d2630000ec630000
 >>>>>>> parent of 28169a78 (start slideing)
@@ -636,9 +655,15 @@ MonoBehaviour:
   m_Position:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -2.1671803, y: 0.3691581, z: -0.10405898}
     speed: 2
     m_Value: {x: -2.1671803, y: 0.3691581, z: -0.10405898}
+=======
+    m_Target: {x: 0.12099671, y: 0.8408213, z: 3.4872239}
+    speed: 2
+    m_Value: {x: 0.12099671, y: 0.8408213, z: 3.4872239}
+>>>>>>> parent of 28169a78 (start slideing)
 =======
     m_Target: {x: 0.12099671, y: 0.8408213, z: 3.4872239}
     speed: 2
@@ -697,6 +722,7 @@ MonoBehaviour:
   m_Rotation:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0, y: 1, z: 0, w: 0}
     speed: 2
     m_Value: {x: 0, y: 1, z: 0, w: 0}
@@ -704,6 +730,15 @@ MonoBehaviour:
     m_Target: 1.3861079
     speed: 2
     m_Value: 1.3861079
+=======
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  m_Size:
+    m_Target: 328.5745
+    speed: 2
+    m_Value: 328.5745
+>>>>>>> parent of 28169a78 (start slideing)
 =======
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
@@ -887,9 +922,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 79}
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 4e9e0100
     m_LastClickedID: 106062
     m_ExpandedIDs: 00000000fa6a0000fc6a0000fe6a0000006b0000026b0000046b0000066b0000086b00000a6b00000c6b00000e6b000000ca9a3b
+=======
+    m_SelectedIDs: 46660000
+    m_LastClickedID: 26182
+    m_ExpandedIDs: 00000000b4650000b6650000b8650000ba650000bc650000be650000c0650000c2650000c4650000c6650000c865000000ca9a3b
+>>>>>>> parent of 28169a78 (start slideing)
 =======
     m_SelectedIDs: 46660000
     m_LastClickedID: 26182
@@ -929,7 +970,11 @@ MonoBehaviour:
     m_LastClickedID: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000fa6a0000fc6a0000fe6a0000006b0000026b0000046b0000066b0000086b00000a6b00000c6b00000e6b0000
+=======
+    m_ExpandedIDs: 00000000b4650000b6650000b8650000ba650000bc650000be650000c0650000c2650000c4650000c6650000c8650000
+>>>>>>> parent of 28169a78 (start slideing)
 =======
     m_ExpandedIDs: 00000000b4650000b6650000b8650000ba650000bc650000be650000c0650000c2650000c4650000c6650000c8650000
 >>>>>>> parent of 28169a78 (start slideing)
@@ -1053,7 +1098,11 @@ MonoBehaviour:
     m_IsLocked: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastSelectedObjectID: 25480
+=======
+  m_LastSelectedObjectID: 25136
+>>>>>>> parent of 28169a78 (start slideing)
 =======
   m_LastSelectedObjectID: 25136
 >>>>>>> parent of 28169a78 (start slideing)

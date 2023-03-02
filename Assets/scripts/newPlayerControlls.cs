@@ -6,20 +6,11 @@ using UnityEngine.SceneManagement;
 
 
 public class newPlayerControlls : MonoBehaviour
-<<<<<<< HEAD
-<<<<<<< HEAD
 {      
     [Header("player Things")]
     public int health;
     [Header("Movemietn things")]
-    private int moveSpeed = 100;
-=======
-=======
->>>>>>> parent of 28169a78 (start slideing)
-{   
-    public Transform camera;
-    public int moveSpeed;
->>>>>>> parent of 28169a78 (start slideing)
+    private int moveSpeed = 90;
     public int speedLimit;
     private int rotateSpeed = 30;
     [Header("Jumping")]
@@ -42,20 +33,15 @@ public class newPlayerControlls : MonoBehaviour
     private Vector3 movementAngle;
     private Vector3 camreaForward2d;
     private Vector3 camreaRight2d;
-<<<<<<< HEAD
-<<<<<<< HEAD
     private Animator anim;
     
-=======
->>>>>>> parent of 28169a78 (start slideing)
-=======
->>>>>>> parent of 28169a78 (start slideing)
     [SerializeField]
-    private InputActionReference jumpButoon, leftJoystick, rightJoystick;
+    private InputActionReference jumpButoon, leftJoystick, rightJoystick, slideButoon;
 
     private void Start() {
         anim = GetComponent<Animator>();
         player = GetComponent<Rigidbody>();
+        anim.enabled = true;
     }
 
     void OnCollisionEnter(Collision collision){
@@ -66,24 +52,12 @@ public class newPlayerControlls : MonoBehaviour
     }
     private void OnEnable() {
         jumpButoon.action.performed += jumping;
-<<<<<<< HEAD
-<<<<<<< HEAD
         slideButoon.action.performed += slideing;
-=======
->>>>>>> parent of 28169a78 (start slideing)
-=======
->>>>>>> parent of 28169a78 (start slideing)
     }
     
     private void OnDisable() {
         jumpButoon.action.performed -= jumping;
-<<<<<<< HEAD
-<<<<<<< HEAD
         slideButoon.action.performed -= slideing;
-=======
->>>>>>> parent of 28169a78 (start slideing)
-=======
->>>>>>> parent of 28169a78 (start slideing)
     }
 
     private void Update() {
@@ -99,12 +73,11 @@ public class newPlayerControlls : MonoBehaviour
             die();
         }
         if(OnFloor == false){
-            moveSpeed =  500;
+            moveSpeed =  50;
         }
         if(OnFloor == true){
-            moveSpeed = 1000;
+            moveSpeed = 100;
         }
-        Debug.Log(moveSpeed);
     }
     private void FixedUpdate() {
         moveplayer(movement);
@@ -117,8 +90,6 @@ public class newPlayerControlls : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     private void slideing(InputAction.CallbackContext obj){
         if(OnFloor){
            slide(true,slideTime); 
@@ -127,18 +98,6 @@ public class newPlayerControlls : MonoBehaviour
     private void stopslide(InputAction.CallbackContext obj){
         slide(false,slideTime); 
     }
-=======
-=======
->>>>>>> parent of 28169a78 (start slideing)
-//    private void slide(InputAction.CallbackContext obj){
-//        if(OnFloor){
-//
-//        }
-//    }
-<<<<<<< HEAD
->>>>>>> parent of 28169a78 (start slideing)
-=======
->>>>>>> parent of 28169a78 (start slideing)
 
     public void jump(int hight) {
         player.AddForce(0,hight,0);
@@ -151,8 +110,6 @@ public class newPlayerControlls : MonoBehaviour
         transform.RotateAround(camera.position, new Vector3(0,1,0), joysticInput.x * 0.1f * rotateSpeed);
     }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     public void slide(bool StartStop, float time) {
         if(StartStop){
             //anim.Play("Base Layer.Sliding", 0 ,0.0f);
@@ -175,21 +132,10 @@ public class newPlayerControlls : MonoBehaviour
     }
     
 
-=======
-//    public void slide() {
-//
-//    }
->>>>>>> parent of 28169a78 (start slideing)
-=======
-//    public void slide() {
-//
-//    }
->>>>>>> parent of 28169a78 (start slideing)
     private void SpeedControl()
     {
         Vector3 flatVel = new Vector3(player.velocity.x, 0f, player.velocity.z);
 
-        // limit velocity if needed
         if(flatVel.magnitude > speedLimit)
         {
             Vector3 limitedVel = flatVel.normalized * speedLimit;
