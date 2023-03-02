@@ -12,6 +12,7 @@ public class newPlayerControlls : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 {      
+<<<<<<< HEAD
     [Header("player Things")]
     public int health;
     [Header("Movemietn things")]
@@ -29,28 +30,27 @@ public class newPlayerControlls : MonoBehaviour
     public Transform camera;
     public int moveSpeed;
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+    public int slideTime;
+    public Transform camera;
+    public int moveSpeed;
+>>>>>>> parent of 55df25a3 (i need to fix)
     public int speedLimit;
-    private int rotateSpeed = 30;
-    [Header("Jumping")]
+    public int rotateSpeed;
     public int JumpHight;
     public float hightOfPlayer;
-    [Header("Slideing")]
-    public float slideTime;
-    public float slideHight;
-    [Header("GameObjects")]
-    public Transform camera;
-    public CapsuleCollider playerColishon;
-    public LayerMask whatIsGround;
-    public PhysicMaterial phisucsMatersl;
-    
+    public int health;
     private bool OnFloor;
     private Rigidbody player;
+    public CapsuleCollider playerColishon;
+    public LayerMask whatIsGround;
     private Vector2 joystickInput;
     private Vector2 rightJoystickInput;
     private Vector3 movement;
     private Vector3 movementAngle;
     private Vector3 camreaForward2d;
     private Vector3 camreaRight2d;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -68,16 +68,19 @@ public class newPlayerControlls : MonoBehaviour
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+    public physicMaterial phisucsMatersl;
+>>>>>>> parent of 55df25a3 (i need to fix)
     [SerializeField]
     private InputActionReference jumpButoon, leftJoystick, rightJoystick;
 
     private void Start() {
-        anim = GetComponent<Animator>();
         player = GetComponent<Rigidbody>();
         anim.enabled = true;
     }
 
-    void OnCollisionEnter(Collision collision){
+    void OnCollisionEnter(Collision collision)
+    {
      if(collision.gameObject.tag == ("enime"))
      {
         health -= 1; 
@@ -85,6 +88,7 @@ public class newPlayerControlls : MonoBehaviour
     }
     private void OnEnable() {
         jumpButoon.action.performed += jumping;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -101,10 +105,14 @@ public class newPlayerControlls : MonoBehaviour
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+        slideButoon.action.performed += slide;
+>>>>>>> parent of 55df25a3 (i need to fix)
     }
     
     private void OnDisable() {
         jumpButoon.action.performed -= jumping;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -121,6 +129,9 @@ public class newPlayerControlls : MonoBehaviour
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+        slideButoon.action.performed -= slide;
+>>>>>>> parent of 55df25a3 (i need to fix)
     }
 
     private void Update() {
@@ -135,12 +146,15 @@ public class newPlayerControlls : MonoBehaviour
         if(health <= 0){
             die();
         }
+<<<<<<< HEAD
         if(OnFloor == false){
             moveSpeed =  50;
         }
         if(OnFloor == true){
             moveSpeed = 100;
         }
+=======
+>>>>>>> parent of 55df25a3 (i need to fix)
     }
     private void FixedUpdate() {
         moveplayer(movement);
@@ -158,11 +172,16 @@ public class newPlayerControlls : MonoBehaviour
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     private void slideing(InputAction.CallbackContext obj){
+=======
+    private void slide(InputAction.CallbackContext obj){
+>>>>>>> parent of 55df25a3 (i need to fix)
         if(OnFloor){
-           slide(true,slideTime); 
+           slide(); 
         }
     }
+<<<<<<< HEAD
     private void stopslide(InputAction.CallbackContext obj){
         slide(false,slideTime); 
     }
@@ -193,6 +212,8 @@ public class newPlayerControlls : MonoBehaviour
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+>>>>>>> parent of 55df25a3 (i need to fix)
 
     public void jump(int hight) {
         player.AddForce(0,hight,0);
@@ -205,6 +226,7 @@ public class newPlayerControlls : MonoBehaviour
         transform.RotateAround(camera.position, new Vector3(0,1,0), joysticInput.x * 0.1f * rotateSpeed);
     }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -229,8 +251,11 @@ public class newPlayerControlls : MonoBehaviour
             //anim.Play("Base Layer.StopSliding", 0 ,0.0f);
             Debug.Log("stop");
         }
+=======
+    public void slide() {
+        
+>>>>>>> parent of 55df25a3 (i need to fix)
     }
-    
 
 =======
 //    public void slide() {
