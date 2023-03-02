@@ -23,8 +23,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_RootView: {fileID: 6}
 =======
+=======
+>>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
 =======
@@ -355,6 +358,9 @@ MonoBehaviour:
   m_Name: ProjectBrowser
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 28169a78 (start slideing)
+=======
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
@@ -390,6 +396,9 @@ MonoBehaviour:
   m_LastSelected: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 28169a78 (start slideing)
+=======
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
@@ -412,6 +421,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 360
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -614,6 +624,8 @@ MonoBehaviour:
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+>>>>>>> parent of 28169a78 (start slideing)
     width: 502
     height: 947
   m_MinSize: {x: 276, y: 71}
@@ -661,7 +673,11 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ExpandedIDs: c0efffffaef6ffff26f9ffff1cfaffff
+=======
+      m_ExpandedIDs: 2efbffff3062000028630000846300008863000092630000c4630000ca630000d2630000ec630000
+>>>>>>> parent of 28169a78 (start slideing)
 =======
       m_ExpandedIDs: 2efbffff3062000028630000846300008863000092630000c4630000ca630000d2630000ec630000
 >>>>>>> parent of 28169a78 (start slideing)
@@ -956,9 +972,15 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -236.08463, y: -110.752106, z: 0.40303326}
     speed: 2
     m_Value: {x: -236.08463, y: -110.752106, z: 0.40303326}
+=======
+    m_Target: {x: 0.12099671, y: 0.8408213, z: 3.4872239}
+    speed: 2
+    m_Value: {x: 0.12099671, y: 0.8408213, z: 3.4872239}
+>>>>>>> parent of 28169a78 (start slideing)
 =======
     m_Target: {x: 0.12099671, y: 0.8408213, z: 3.4872239}
     speed: 2
@@ -1003,6 +1025,7 @@ MonoBehaviour:
     yGrid:
       m_Fade:
         m_Target: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1052,6 +1075,19 @@ MonoBehaviour:
     zGrid:
       m_Fade:
         m_Target: 1
+=======
+>>>>>>> parent of 28169a78 (start slideing)
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 1, y: 1}
+<<<<<<< HEAD
+>>>>>>> parent of 28169a78 (start slideing)
+=======
+    zGrid:
+      m_Fade:
+        m_Target: 1
         speed: 2
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
@@ -1065,6 +1101,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0, y: 1, z: 0, w: 0}
     speed: 2
     m_Value: {x: 0, y: 1, z: 0, w: -0.00000009418656}
@@ -1072,6 +1109,15 @@ MonoBehaviour:
     m_Target: 1640.8595
     speed: 2
     m_Value: 1570.2004
+=======
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  m_Size:
+    m_Target: 328.5745
+    speed: 2
+    m_Value: 328.5745
+>>>>>>> parent of 28169a78 (start slideing)
 =======
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
