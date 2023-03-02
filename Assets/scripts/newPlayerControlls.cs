@@ -7,25 +7,32 @@ using UnityEngine.SceneManagement;
 
 public class newPlayerControlls : MonoBehaviour
 {      
-    public int slideTime;
-    public Transform camera;
-    public int moveSpeed;
+    [Header("player Things")]
+    public int health;
+    [Header("Movemietn things")]
+    private int moveSpeed = 100;
     public int speedLimit;
-    public int rotateSpeed;
+    private int rotateSpeed = 30;
+    [Header("Jumping")]
     public int JumpHight;
     public float hightOfPlayer;
-    public int health;
-    private bool OnFloor;
-    private Rigidbody player;
+    [Header("Slideing")]
+    public float slideTime;
+    public float slideHight;
+    [Header("GameObjects")]
+    public Transform camera;
     public CapsuleCollider playerColishon;
     public LayerMask whatIsGround;
+    public PhysicMaterial phisucsMatersl;
+    private bool OnFloor;
+    private Rigidbody player;
     private Vector2 joystickInput;
     private Vector2 rightJoystickInput;
     private Vector3 movement;
     private Vector3 movementAngle;
     private Vector3 camreaForward2d;
     private Vector3 camreaRight2d;
-    public physicMaterial phisucsMatersl;
+    
     [SerializeField]
     private InputActionReference jumpButoon, leftJoystick, rightJoystick, slideButoon;
 
@@ -33,8 +40,7 @@ public class newPlayerControlls : MonoBehaviour
         player = GetComponent<Rigidbody>();
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
+    void OnCollisionEnter(Collision collision){
      if(collision.gameObject.tag == ("enime"))
      {
         health -= 1; 
@@ -42,12 +48,12 @@ public class newPlayerControlls : MonoBehaviour
     }
     private void OnEnable() {
         jumpButoon.action.performed += jumping;
-        slideButoon.action.performed += slide;
+        slideButoon.action.performed += slideing;
     }
     
     private void OnDisable() {
         jumpButoon.action.performed -= jumping;
-        slideButoon.action.performed -= slide;
+        slideButoon.action.performed -= slideing;
     }
 
     private void Update() {
@@ -74,14 +80,17 @@ public class newPlayerControlls : MonoBehaviour
         }
     }
 
-    private void slide(InputAction.CallbackContext obj){
+    private void slideing(InputAction.CallbackContext obj){
         if(OnFloor){
-           slide(); 
+           slide(true,slideTime); 
         }
+    }
+    private void stopslide(InputAction.CallbackContext obj){
+        slide(false,slideTime); 
     }
 
     public void jump(int hight) {
-        player.AddForce(0,hight,0);
+        player.velocity = new Vector3(player.velocity.x,hight,player.velocity.z);
     }
 
     public void moveplayer(Vector3 joysticInput) {
@@ -91,9 +100,20 @@ public class newPlayerControlls : MonoBehaviour
         transform.RotateAround(camera.position, new Vector3(0,1,0), joysticInput.x * 0.1f * rotateSpeed);
     }
 
-    public void slide() {
-        
+    public void slide(bool StartStop, float time) {
+        if(StartStop){
+            if(time <= slideTime){
+                Debug.Log("sart");
+            }
+            else if(time >= slideTime){
+                Debug.Log("stop time");
+            }
+        }
+        else if(StartStop == false){
+            Debug.Log("stop");
+        }
     }
+    
 
     private void SpeedControl()
     {
