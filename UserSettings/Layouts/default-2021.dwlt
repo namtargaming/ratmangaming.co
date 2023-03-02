@@ -20,6 +20,7 @@ MonoBehaviour:
     height: 981
   m_ShowMode: 4
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Title: Scene
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +34,9 @@ MonoBehaviour:
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+  m_Title: Console
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
   m_Title: Console
 >>>>>>> parent of 55df25a3 (i need to fix)
@@ -243,7 +247,11 @@ MonoBehaviour:
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 53
+=======
+  controlID: 49
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
   controlID: 49
 >>>>>>> parent of 55df25a3 (i need to fix)
@@ -272,7 +280,11 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 54
+=======
+  controlID: 50
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
   controlID: 50
 >>>>>>> parent of 55df25a3 (i need to fix)
@@ -301,7 +313,11 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 55
+=======
+  controlID: 93
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
   controlID: 93
 >>>>>>> parent of 55df25a3 (i need to fix)
@@ -386,6 +402,7 @@ MonoBehaviour:
 =======
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Name: ProjectBrowser
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -400,6 +417,9 @@ MonoBehaviour:
 =======
   m_Name: ConsoleWindow
 >>>>>>> parent of 55df25a3 (i need to fix)
+=======
+  m_Name: ConsoleWindow
+>>>>>>> parent of 55df25a3 (i need to fix)
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 4}
@@ -407,6 +427,7 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     y: 0
@@ -431,10 +452,19 @@ MonoBehaviour:
   m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
 >>>>>>> parent of 55df25a3 (i need to fix)
+=======
+    y: 650
+    width: 1418
+    height: 297
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 16}
+>>>>>>> parent of 55df25a3 (i need to fix)
   m_Panes:
   - {fileID: 15}
   - {fileID: 16}
   - {fileID: 17}
+<<<<<<< HEAD
 <<<<<<< HEAD
   m_Selected: 0
   m_LastSelected: 1
@@ -448,6 +478,10 @@ MonoBehaviour:
 >>>>>>> parent of 28169a78 (start slideing)
 =======
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+  m_Selected: 1
+  m_LastSelected: 0
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
   m_Selected: 1
   m_LastSelected: 0
@@ -715,6 +749,9 @@ MonoBehaviour:
     y: 73
     width: 349
     height: 629
+<<<<<<< HEAD
+>>>>>>> parent of 55df25a3 (i need to fix)
+=======
 >>>>>>> parent of 55df25a3 (i need to fix)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -723,6 +760,7 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD
       m_SelectedIDs: 
       m_LastClickedID: 0
@@ -743,6 +781,11 @@ MonoBehaviour:
 =======
       m_ExpandedIDs: 2efbffff3062000028630000846300008863000092630000c4630000ca630000d2630000ec630000
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+      m_SelectedIDs: 1e640000
+      m_LastClickedID: 25630
+      m_ExpandedIDs: 32fbffffd462000096630000
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
       m_SelectedIDs: 1e640000
       m_LastClickedID: 25630
@@ -802,6 +845,9 @@ MonoBehaviour:
     y: 73
     width: 1066
     height: 629
+<<<<<<< HEAD
+>>>>>>> parent of 55df25a3 (i need to fix)
+=======
 >>>>>>> parent of 55df25a3 (i need to fix)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1042,6 +1088,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -236.08463, y: -110.752106, z: 0.40303326}
     speed: 2
     m_Value: {x: -236.08463, y: -110.752106, z: 0.40303326}
@@ -1065,6 +1112,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.12099671, y: 0.8408213, z: 3.4872239}
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+    m_Target: {x: 0.47055122, y: 0.9696848, z: -0.06094568}
+    speed: 2
+    m_Value: {x: 0.47055122, y: 0.9696848, z: -0.06094568}
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
     m_Target: {x: 0.47055122, y: 0.9696848, z: -0.06094568}
     speed: 2
@@ -1177,6 +1229,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0, y: 1, z: 0, w: 0}
     speed: 2
     m_Value: {x: 0, y: 1, z: 0, w: -0.00000009418656}
@@ -1220,6 +1273,15 @@ MonoBehaviour:
     speed: 2
     m_Value: 328.5745
 >>>>>>> parent of 28169a78 (start slideing)
+=======
+    m_Target: {x: 0.2085644, y: -0.25055197, z: 0.055370994, w: 0.9437474}
+    speed: 2
+    m_Value: {x: 0.20856436, y: -0.2505519, z: 0.05537098, w: 0.94374716}
+  m_Size:
+    m_Target: 2.9808457
+    speed: 2
+    m_Value: 2.9808457
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
     m_Target: {x: 0.2085644, y: -0.25055197, z: 0.055370994, w: 0.9437474}
     speed: 2
@@ -1355,6 +1417,9 @@ MonoBehaviour:
     y: 723
     width: 1417
     height: 276
+<<<<<<< HEAD
+>>>>>>> parent of 55df25a3 (i need to fix)
+=======
 >>>>>>> parent of 55df25a3 (i need to fix)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1454,9 +1519,15 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 79}
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_SelectedIDs: 46660000
     m_LastClickedID: 26182
     m_ExpandedIDs: 00000000b4650000b6650000b8650000ba650000bc650000be650000c0650000c2650000c4650000c6650000c865000000ca9a3b
+=======
+    m_SelectedIDs: a86a0000
+    m_LastClickedID: 27304
+    m_ExpandedIDs: 00000000566a0000586a00005a6a00005c6a00005e6a0000606a0000626a0000646a0000666a0000686a00006a6a000000ca9a3b
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
     m_SelectedIDs: a86a0000
     m_LastClickedID: 27304
@@ -1490,7 +1561,11 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000b4650000b6650000b8650000ba650000bc650000be650000c0650000c2650000c4650000c6650000c8650000
+=======
+    m_ExpandedIDs: 00000000566a0000586a00005a6a00005c6a00005e6a0000606a0000626a0000646a0000666a0000686a00006a6a0000
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
     m_ExpandedIDs: 00000000566a0000586a00005a6a00005c6a00005e6a0000606a0000626a0000646a0000666a0000686a00006a6a0000
 >>>>>>> parent of 55df25a3 (i need to fix)
@@ -1581,6 +1656,9 @@ MonoBehaviour:
     y: 723
     width: 1417
     height: 276
+<<<<<<< HEAD
+>>>>>>> parent of 55df25a3 (i need to fix)
+=======
 >>>>>>> parent of 55df25a3 (i need to fix)
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1620,7 +1698,11 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_LastSelectedObjectID: 25136
+=======
+  m_LastSelectedObjectID: 25494
+>>>>>>> parent of 55df25a3 (i need to fix)
 =======
   m_LastSelectedObjectID: 25494
 >>>>>>> parent of 55df25a3 (i need to fix)
