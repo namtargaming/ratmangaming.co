@@ -13,7 +13,7 @@ public class bulletshellScript : MonoBehaviour{
     {
         bulletshell = GetComponent<Rigidbody>();
 
-        bulletshell.AddForce(transform.rotation * new Vector3(60,0,-bulletshellspeed));
+        bulletshell.AddForce(transform.rotation * new Vector3(100,0,-bulletshellspeed));
 
     }
     // Update is called once per frame
