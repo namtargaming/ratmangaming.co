@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -38,6 +39,8 @@ public class newPlayerControlls : MonoBehaviour
     private Vector3 camreaRight2d;
     private bool slidng = false;
     private float hightDifrents;
+    private Vector3 flatVel;
+    private Vector3 absalutevelosity;
 
     [SerializeField]
     private InputActionReference jumpButoon, leftJoystick, rightJoystick, slideButoon;
@@ -65,14 +68,17 @@ public class newPlayerControlls : MonoBehaviour
     }
 
     private void Update() {
+        Debug.Log(flatVel.magnitude);
+        Debug.Log(slidng);
         camreaForward2d = new Vector3(camera.forward.x, 0.0f, camera.forward.z); 
         camreaRight2d = new Vector3(camera.right.x, 0.0f, camera.right.z); 
         joystickInput = leftJoystick.action.ReadValue<Vector2>();
         rightJoystickInput = rightJoystick.action.ReadValue<Vector2>();
-        OnFloor = Physics.Raycast(transform.position + new Vector3(camera.localPosition.x,hightDifrents,camera.localPosition.z), Vector3.down, hightOfPlayer, whatIsGround);
+        OnFloor = Physics.Raycast(new Vector3(camera.position.x,transform.position.y + hightDifrents,camera.position.z), Vector3.down, hightOfPlayer, whatIsGround);
         movement = camreaForward2d * joystickInput.y + camreaRight2d * joystickInput.x;
         playerColishon.center = new Vector3(camera.localPosition.x, 0.84f, camera.localPosition.z);
-        testcube.localPosition = new Vector3(camera.localPosition.x,hightDifrents,camera.localPosition.z);
+        testcube.position = new Vector3(camera.position.x,transform.position.y + hightDifrents,camera.position.z);
+        absalutevelosity = new Vector3(Math.Abs(player.velocity.x), Math.Abs(player.velocity.y), Math.Abs(player.velocity.z));
         SpeedControl();
         if(health <= 0){
             die();
@@ -82,6 +88,12 @@ public class newPlayerControlls : MonoBehaviour
         }
         else if(slidng == false){
             hightDifrents = Hight;
+        }
+        if(OnFloor == false && slidng == false){
+            moveSpeed = 20;
+        }
+        else if(OnFloor == true && slidng == false){
+            moveSpeed = 100;
         }
     }
     private void FixedUpdate() {
@@ -104,6 +116,8 @@ public class newPlayerControlls : MonoBehaviour
         playerColishon.height = HitBoxHight;
         transform.SetLocalPositionAndRotation(new Vector3(transform.localPosition.x , transform.localPosition.y + Hight , transform.localPosition.z), transform.localRotation);
         slidng = false;
+        moveSpeed = 100;
+        JumpHight = 10;
     }
 
     public void jump(int hight) {
@@ -120,20 +134,24 @@ public class newPlayerControlls : MonoBehaviour
     public void slide() {
         playerColishon.height = slideHitBoxHight;
         transform.SetLocalPositionAndRotation(new Vector3(transform.localPosition.x , transform.localPosition.y + slideHight , transform.localPosition.z), transform.localRotation);
-        slidng = true;
+        moveSpeed = 10;
+        JumpHight = 4;
+        if(flatVel.magnitude > 5 && slidng == false){
+            slidng = true;
+            player.AddForce(camreaForward2d * slideAddVelosity);
+        }
     }
     
 
-    private void SpeedControl()
-    {
-        Vector3 flatVel = new Vector3(player.velocity.x, 0f, player.velocity.z);
-
-        if(flatVel.magnitude > speedLimit)
-        {
-            Vector3 limitedVel = flatVel.normalized * speedLimit;
-            player.velocity = new Vector3(limitedVel.x, player.velocity.y, limitedVel.z);
-        }
-    }
+   private void SpeedControl()
+   {
+       flatVel = new Vector3(player.velocity.x, 0f, player.velocity.z);
+       if(flatVel.magnitude > speedLimit && slidng == false)
+       {
+           Vector3 limitedVel = flatVel.normalized * speedLimit;
+           player.velocity = new Vector3(limitedVel.x, player.velocity.y, limitedVel.z);
+       }
+   }
 
     public void die(){
         SceneManager.LoadScene("main");
