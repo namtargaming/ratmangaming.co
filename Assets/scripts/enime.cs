@@ -15,6 +15,7 @@ public class enime : MonoBehaviour
     public BoxCollider collider; 
     private ParticleSystem particlesistem;
     private bool alive = true;
+    private Vector3 flatVel;
     void Start()
     {
         particlesistem = GetComponent<ParticleSystem>();
@@ -23,11 +24,13 @@ public class enime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        SpeedControl();
         if(alive == false){
             if(particlesistem.isPlaying == false){
             Destroy(gameObject);
         }
        }
+
     }
     private void FixedUpdate() {
         move();
@@ -53,5 +56,14 @@ public class enime : MonoBehaviour
         Enime.AddForce(transform.rotation * new Vector3(0,0,followSpeed));
        }
     }
+    private void SpeedControl()
+   {
+       flatVel = new Vector3(Enime.velocity.x, Enime.velocity.y, Enime.velocity.z);
+       if(flatVel.magnitude > topSpeed)
+       {
+           Vector3 limitedVel = flatVel.normalized * topSpeed;
+           Enime.velocity = new Vector3(limitedVel.x, limitedVel.y, limitedVel.z);
+       }
+   }
 
 }
