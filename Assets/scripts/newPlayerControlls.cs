@@ -41,6 +41,7 @@ public class newPlayerControlls : MonoBehaviour
     private float hightDifrents;
     private Vector3 flatVel;
     private Vector3 absalutevelosity;
+    private int setmoveSpeed = 100; 
 
     [SerializeField]
     private InputActionReference jumpButoon, leftJoystick, rightJoystick, slideButoon;
@@ -116,7 +117,7 @@ public class newPlayerControlls : MonoBehaviour
         playerColishon.height = HitBoxHight;
         transform.SetLocalPositionAndRotation(new Vector3(transform.localPosition.x , transform.localPosition.y + Hight , transform.localPosition.z), transform.localRotation);
         slidng = false;
-        moveSpeed = 100;
+        moveSpeed = setmoveSpeed;
         JumpHight = 10;
     }
 
@@ -134,7 +135,7 @@ public class newPlayerControlls : MonoBehaviour
     public void slide() {
         playerColishon.height = slideHitBoxHight;
         transform.SetLocalPositionAndRotation(new Vector3(transform.localPosition.x , transform.localPosition.y + slideHight , transform.localPosition.z), transform.localRotation);
-        moveSpeed = 10;
+        moveSpeed = setmoveSpeed / 10;
         JumpHight = 4;
         if(flatVel.magnitude > 5 && slidng == false){
             slidng = true;
