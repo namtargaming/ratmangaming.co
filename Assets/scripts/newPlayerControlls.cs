@@ -29,6 +29,7 @@ public class newPlayerControlls : MonoBehaviour
     public LayerMask whatIsGround;
     public PhysicMaterial phisucsMatersl;
     public Transform testcube;
+    public Camera cameraObject;
     private bool OnFloor;
     private Rigidbody player;
     private Vector2 joystickInput;
@@ -42,6 +43,7 @@ public class newPlayerControlls : MonoBehaviour
     private Vector3 flatVel;
     private Vector3 absalutevelosity;
     private int setmoveSpeed = 100; 
+
 
     [SerializeField]
     private InputActionReference jumpButoon, leftJoystick, rightJoystick, slideButoon;
@@ -69,6 +71,7 @@ public class newPlayerControlls : MonoBehaviour
     }
 
     private void Update() {
+        cameraObject.fieldOfView = 150;
         Debug.Log(flatVel.magnitude);
         Debug.Log(slidng);
         camreaForward2d = new Vector3(camera.forward.x, 0.0f, camera.forward.z); 

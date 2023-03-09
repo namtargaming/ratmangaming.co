@@ -59,7 +59,7 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 60
+  field of view: 155
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -396,6 +396,7 @@ MonoBehaviour:
     m_Bits: 256
   phisucsMatersl: {fileID: 13400000, guid: 5346137085d3f3643b2dd82e6a4009ee, type: 2}
   testcube: {fileID: 7983143426322122264}
+  cameraObject: {fileID: 1158926426017930075}
   jumpButoon: {fileID: 2137808302625966374, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
     type: 3}
   leftJoystick: {fileID: -5370340583542751740, guid: 0ff692f0babbc5b4bac9982c43ef3dee,
