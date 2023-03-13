@@ -8,7 +8,7 @@ public class enime : MonoBehaviour
 {   
     public GameObject body;
     public GameObject bodyPointer;
-    public Transform player;
+    private GameObject player;
     public int topSpeed;
     public int followSpeed;
     public Rigidbody Enime;
@@ -19,6 +19,7 @@ public class enime : MonoBehaviour
     void Start()
     {
         particlesistem = GetComponent<ParticleSystem>();
+        player = GameObject.Find("/newPlayer/Main Camera");
     }
 
     // Update is called once per frame
@@ -52,7 +53,7 @@ public class enime : MonoBehaviour
     }
     private void move(){
         if(alive == true){
-        transform.LookAt(player.position);
+        transform.LookAt(player.transform.position);
         Enime.AddForce(transform.rotation * new Vector3(0,0,followSpeed));
        }
     }

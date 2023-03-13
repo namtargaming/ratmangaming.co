@@ -72,8 +72,6 @@ public class newPlayerControlls : MonoBehaviour
 
     private void Update() {
         cameraObject.fieldOfView = 150;
-        Debug.Log(flatVel.magnitude);
-        Debug.Log(slidng);
         camreaForward2d = new Vector3(camera.forward.x, 0.0f, camera.forward.z); 
         camreaRight2d = new Vector3(camera.right.x, 0.0f, camera.right.z); 
         joystickInput = leftJoystick.action.ReadValue<Vector2>();
