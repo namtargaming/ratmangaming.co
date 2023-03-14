@@ -7,7 +7,6 @@ using UnityEngine;
 public class skelliton : MonoBehaviour
 {   
     public GameObject body;
-    public GameObject bodyPointer;
     private GameObject player;
     public int topSpeed;
     public int followSpeed;
@@ -45,7 +44,6 @@ public class skelliton : MonoBehaviour
         particlesistem.Play();
         alive = false;
         Destroy(body);
-        Destroy(bodyPointer);
         Enime.drag = 10;
         Enime.freezeRotation = true;
         Enime.constraints = RigidbodyConstraints.FreezePosition | RigidbodyConstraints.FreezeRotation;

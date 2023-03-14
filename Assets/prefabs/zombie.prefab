@@ -4860,12 +4860,15 @@ MonoBehaviour:
   body: {fileID: 8075560138599890441}
   bodyPointer: {fileID: 5365120074850481312}
   topSpeed: 20
-  followSpeed: 100
+  followSpeed: 500
   Enime: {fileID: 3797958505162345376}
   boxCollider: {fileID: 4051104840099431379}
   health: 4
-  jumpMultiplyer: 1063
+  jumpMultiplyer: 1000
   coneColider: {fileID: 6687667986314911097}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!136 &4051104840099431379
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -4876,8 +4879,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.92
-  m_Height: 1.76
+  m_Radius: 0.69
+  m_Height: 1.36
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3156608086733974471

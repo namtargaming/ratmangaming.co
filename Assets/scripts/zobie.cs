@@ -20,6 +20,8 @@ public class zobie : MonoBehaviour
     public int jumpMultiplyer = 10;
     public GameObject coneColider;
     private bool jumpReaddy;
+    private bool OnFloor;
+    public LayerMask whatIsGround;
     void Start()
     {
         particlesistem = GetComponent<ParticleSystem>();
@@ -29,6 +31,7 @@ public class zobie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
+        OnFloor = Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 0.87f,transform.position.z), Vector3.down, 0, whatIsGround);
         SpeedControl();
         if(alive == false){
             if(particlesistem.isPlaying == false){
@@ -51,7 +54,7 @@ public class zobie : MonoBehaviour
         Debug.Log("trigger hit");
         if(other.gameObject.tag == ("Player")){
             Debug.Log("read player");
-            if(jumpReaddy == true){
+            if(jumpReaddy == true && OnFloor == true){
             Debug.Log("jump ready");
             jump();
             jumpReaddy = false;
@@ -74,7 +77,7 @@ public class zobie : MonoBehaviour
         Destroy(boxCollider);
     }
     private void move(){
-        if(alive == true){
+        if(alive == true  && OnFloor == true){
         transform.LookAt(new Vector3(player.transform.position.x, transform.position.y ,player.transform.position.z));
         Enime.AddForce(transform.rotation * new Vector3(0,0,followSpeed));
        }
