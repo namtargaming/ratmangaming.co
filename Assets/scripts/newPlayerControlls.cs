@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using System;using System;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -24,7 +24,7 @@ public class newPlayerControlls : MonoBehaviour
     private float slideHight = -0.35f;
     private float slideHitBoxHight = 1f;
     [Header("GameObjects")]
-    public Transform camera;
+    public Transform cameraTransform;
     public CapsuleCollider playerColishon;
     public LayerMask whatIsGround;
     public PhysicMaterial phisucsMatersl;
@@ -71,15 +71,14 @@ public class newPlayerControlls : MonoBehaviour
     }
 
     private void Update() {
-        cameraObject.fieldOfView = 150;
-        camreaForward2d = new Vector3(camera.forward.x, 0.0f, camera.forward.z); 
-        camreaRight2d = new Vector3(camera.right.x, 0.0f, camera.right.z); 
+        camreaForward2d = new Vector3(cameraTransform.forward.x, 0.0f, cameraTransform.forward.z); 
+        camreaRight2d = new Vector3(cameraTransform.right.x, 0.0f, cameraTransform.right.z); 
         joystickInput = leftJoystick.action.ReadValue<Vector2>();
         rightJoystickInput = rightJoystick.action.ReadValue<Vector2>();
-        OnFloor = Physics.Raycast(new Vector3(camera.position.x,transform.position.y + hightDifrents,camera.position.z), Vector3.down, hightOfPlayer, whatIsGround);
+        OnFloor = Physics.Raycast(new Vector3(cameraTransform.position.x,transform.position.y + hightDifrents,cameraTransform.position.z), Vector3.down, hightOfPlayer, whatIsGround);
         movement = camreaForward2d * joystickInput.y + camreaRight2d * joystickInput.x;
-        playerColishon.center = new Vector3(camera.localPosition.x, 0.84f, camera.localPosition.z);
-        testcube.position = new Vector3(camera.position.x,transform.position.y + hightDifrents,camera.position.z);
+        playerColishon.center = new Vector3(cameraTransform.localPosition.x, 0.84f, cameraTransform.localPosition.z);
+        testcube.position = new Vector3(cameraTransform.position.x,transform.position.y + hightDifrents,cameraTransform.position.z);
         absalutevelosity = new Vector3(Math.Abs(player.velocity.x), Math.Abs(player.velocity.y), Math.Abs(player.velocity.z));
         SpeedControl();
         if(health <= 0){
@@ -130,7 +129,7 @@ public class newPlayerControlls : MonoBehaviour
         player.AddForce(joysticInput * moveSpeed);
     }
     public void rotateplayer(Vector3 joysticInput) {
-        transform.RotateAround(camera.position, new Vector3(0,1,0), joysticInput.x * 0.1f * rotateSpeed);
+        transform.RotateAround(cameraTransform.position, new Vector3(0,1,0), joysticInput.x * 0.1f * rotateSpeed);
     }
 
     public void slide() {

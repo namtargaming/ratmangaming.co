@@ -181,7 +181,7 @@ public partial class @gunControlls : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""6cd858e1-6ab8-43eb-93cc-414969d3e33c"",
-                    ""path"": ""<XRController>{RightHand}/gripButton"",
+                    ""path"": ""<XRController>{RightHand}/gripPressed"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

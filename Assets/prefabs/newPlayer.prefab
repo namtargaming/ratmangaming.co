@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 3624556294369406639}
   m_Layer: 3
   m_Name: 'colishon '
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -331,7 +331,7 @@ GameObject:
   - component: {fileID: 9054145273104932661}
   m_Layer: 0
   m_Name: newPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,7 +389,7 @@ MonoBehaviour:
   JumpHight: 10
   hightOfPlayer: 0.4
   slideAddVelosity: 0
-  camera: {fileID: 7907815222758376563}
+  cameraTransform: {fileID: 7907815222758376563}
   playerColishon: {fileID: 3624556294369406639}
   whatIsGround:
     serializedVersion: 2
