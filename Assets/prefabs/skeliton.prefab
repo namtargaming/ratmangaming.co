@@ -55,6 +55,7 @@ MonoBehaviour:
   followSpeed: 100
   Enime: {fileID: 3797958505162345376}
   boxCollider: {fileID: 2797868434461833986}
+  anim: {fileID: 6105473829172801464}
 --- !u!54 &3797958505162345376
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5303,7 +5304,7 @@ PrefabInstance:
     - target: {fileID: 4865064391339405807, guid: 8888a92dc22f29a40bf9cf77d7a8522b,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4865064391339405807, guid: 8888a92dc22f29a40bf9cf77d7a8522b,
         type: 3}
@@ -5328,7 +5329,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 7660434728970023363}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &5007793499014564312
+--- !u!95 &6105473829172801464
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0

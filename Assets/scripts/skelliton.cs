@@ -15,10 +15,12 @@ public class skelliton : MonoBehaviour
     private ParticleSystem particlesistem;
     private bool alive = true;
     private Vector3 flatVel;
+    public Animator anim;
     void Start()
     {
         particlesistem = GetComponent<ParticleSystem>();
         player = GameObject.Find("/newPlayer/Main Camera");
+        
     }
 
     // Update is called once per frame
@@ -30,7 +32,7 @@ public class skelliton : MonoBehaviour
             Destroy(gameObject);
         }
        }
-
+       // anim.Play("Base Layer.Scene", 0 ,0.0f);
     }
     private void FixedUpdate() {
         move();
