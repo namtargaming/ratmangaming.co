@@ -16,8 +16,13 @@ public class skelliton : MonoBehaviour
     private bool alive = true;
     private Vector3 flatVel;
     public Animator anim;
+    private score scoreboardScript; 
+    private GameObject scoreboardObject;
     void Start()
     {
+
+        scoreboardObject = GameObject.Find("/score");
+        scoreboardScript = scoreboardObject.GetComponent<score>();
         particlesistem = GetComponent<ParticleSystem>();
         player = GameObject.Find("/newPlayer/Main Camera");
         
@@ -43,6 +48,7 @@ public class skelliton : MonoBehaviour
         }
     }
     private void die(){
+        scoreboardScript.playerScore += 10;
         particlesistem.Play();
         alive = false;
         Destroy(body);

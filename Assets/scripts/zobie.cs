@@ -22,8 +22,12 @@ public class zobie : MonoBehaviour
     private bool jumpReaddy;
     private bool OnFloor;
     public LayerMask whatIsGround;
+    private score scoreboardScript; 
+    private GameObject scoreboardObject;
     void Start()
     {
+        scoreboardObject = GameObject.Find("/score");
+        scoreboardScript = scoreboardObject.GetComponent<score>();
         particlesistem = GetComponent<ParticleSystem>();
         player = GameObject.Find("/newPlayer/Main Camera");
     }
@@ -31,7 +35,8 @@ public class zobie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        OnFloor = Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 0.87f,transform.position.z), Vector3.down, 0, whatIsGround);
+        OnFloor = Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 1.0f,transform.position.z), Vector3.down, 0, whatIsGround);
+        Debug.Log(OnFloor);
         SpeedControl();
         if(alive == false){
             if(particlesistem.isPlaying == false){
@@ -51,7 +56,7 @@ public class zobie : MonoBehaviour
         }
     }
     private void OnTriggerEnter(Collider other){
-        Debug.Log("trigger hit");
+
         if(other.gameObject.tag == ("Player")){
             Debug.Log("read player");
             if(jumpReaddy == true && OnFloor == true){
@@ -67,6 +72,10 @@ public class zobie : MonoBehaviour
         }
     }
     private void die(){
+        scoreboardScript.playerScore += 20;
+        if(OnFloor == false){
+            scoreboardScript.playerScore += 20;
+        } 
         particlesistem.Play();
         alive = false;
         Destroy(body);
