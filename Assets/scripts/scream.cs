@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public class zobie : MonoBehaviour
+public class scream : MonoBehaviour
 {   
     public GameObject body;
     public GameObject bodyPointer;
@@ -16,10 +16,7 @@ public class zobie : MonoBehaviour
     private ParticleSystem particlesistem;
     private bool alive = true;
     private Vector3 flatVel;
-    public int health = 4; 
-    public int jumpMultiplyer = 10;
-    public GameObject coneColider;
-    private bool jumpReaddy;
+    public int health = 15; 
     private bool OnFloor;
     public LayerMask whatIsGround;
     private score scoreboardScript; 
@@ -35,7 +32,7 @@ public class zobie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        OnFloor = Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 0.1f,transform.position.z), Vector3.down, 1, whatIsGround);
+        OnFloor = Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 1 ,transform.position.z), Vector3.down, 3, whatIsGround);
         Debug.Log(OnFloor);
         SpeedControl();
         if(alive == false){
@@ -55,27 +52,9 @@ public class zobie : MonoBehaviour
             health -= 1;
         }
     }
-    private void OnTriggerEnter(Collider other){
 
-        if(other.gameObject.tag == ("Player")){
-            Debug.Log("read player");
-            if(jumpReaddy == true && OnFloor == true){
-            Debug.Log("jump ready");
-            jump();
-            jumpReaddy = false;
-            }
-        }
-    }
-    private void OnTriggerExit(Collider other){
-        if(other.gameObject.tag == ("Player")){
-            jumpReaddy = true;
-        }
-    }
     private void die(){
-        scoreboardScript.playerScore += 20;
-        if(OnFloor == false){
-            scoreboardScript.playerScore += 20;
-        } 
+        scoreboardScript.playerScore += 60;
         particlesistem.Play();
         alive = false;
         Destroy(body);
@@ -90,9 +69,6 @@ public class zobie : MonoBehaviour
         transform.LookAt(new Vector3(player.transform.position.x, transform.position.y ,player.transform.position.z));
         Enime.AddForce(transform.rotation * new Vector3(0,0,followSpeed));
        }
-    }
-    private void jump(){
-        Enime.AddForce(new Vector3(0,jumpMultiplyer * player.transform.position.y,0));
     }
     private void SpeedControl()
    {

@@ -7954,7 +7954,8 @@ PrefabInstance:
         type: 3}
       propertyPath: spawnEtity
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1816331851001454809, guid: 12615b33628e2554ab238c8c8b3be866,
+        type: 3}
     - target: {fileID: 7040526779530519535, guid: d3f82ebcb97bcd44397502c62badc3fc,
         type: 3}
       propertyPath: m_text

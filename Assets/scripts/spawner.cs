@@ -13,7 +13,7 @@ public class spawner : MonoBehaviour
     }
     void Update()
     {
-        transform.LookAt(player.transform.position);
+        transform.LookAt( new Vector3(player.transform.position.x ,transform.position.y + 1 ,player.transform.position.z));
     }
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.tag == ("playerBullet")){
