@@ -386,6 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   speedLimit: 20
+  slideingSpeedLimit: 40
   JumpHight: 10
   hightOfPlayer: 0.4
   slideAddVelosity: 0

@@ -15,6 +15,7 @@ public class newPlayerControlls : MonoBehaviour
     [Header("Movemietn things")]
     private int moveSpeed = 100;
     public int speedLimit;
+    public int slideingSpeedLimit;
     private int rotateSpeed = 30;
     [Header("Jumping")]
     public int JumpHight;
@@ -151,6 +152,11 @@ public class newPlayerControlls : MonoBehaviour
        {
            Vector3 limitedVel = flatVel.normalized * speedLimit;
            player.velocity = new Vector3(limitedVel.x, player.velocity.y, limitedVel.z);
+       }
+       else if(flatVel.magnitude > slideingSpeedLimit && slidng == true)
+       {
+            Vector3 limitedVel = flatVel.normalized * slideingSpeedLimit;
+            player.velocity = new Vector3(limitedVel.x, player.velocity.y, limitedVel.z);
        }
    }
 

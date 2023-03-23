@@ -51,7 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 7389911235361229970}
-  topSpeed: 18
+  topSpeed: 22
   followSpeed: 100
   Enime: {fileID: 3797958505162345376}
   boxCollider: {fileID: 2797868434461833986}

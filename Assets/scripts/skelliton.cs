@@ -7,7 +7,7 @@ using UnityEngine;
 public class skelliton : MonoBehaviour
 {   
     public GameObject body;
-    private GameObject player;
+    public GameObject player;
     public int topSpeed;
     public int followSpeed;
     public Rigidbody Enime;
