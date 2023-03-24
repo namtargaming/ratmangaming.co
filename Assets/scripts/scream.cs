@@ -33,7 +33,6 @@ public class scream : MonoBehaviour
     void Update()
     {   
         OnFloor = Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 1 ,transform.position.z), Vector3.down, 3, whatIsGround);
-        Debug.Log(OnFloor);
         SpeedControl();
         if(alive == false){
             if(particlesistem.isPlaying == false){

@@ -36,7 +36,6 @@ public class zobie : MonoBehaviour
     void Update()
     {   
         OnFloor = Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 0.1f,transform.position.z), Vector3.down, 1, whatIsGround);
-        Debug.Log(OnFloor);
         SpeedControl();
         if(alive == false){
             if(particlesistem.isPlaying == false){
@@ -58,9 +57,7 @@ public class zobie : MonoBehaviour
     private void OnTriggerEnter(Collider other){
 
         if(other.gameObject.tag == ("Player")){
-            Debug.Log("read player");
             if(jumpReaddy == true && OnFloor == true){
-            Debug.Log("jump ready");
             jump();
             jumpReaddy = false;
             }

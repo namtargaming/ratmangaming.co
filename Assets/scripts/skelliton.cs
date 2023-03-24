@@ -7,7 +7,7 @@ using UnityEngine;
 public class skelliton : MonoBehaviour
 {   
     public GameObject body;
-    public GameObject player;
+    private GameObject player;
     public int topSpeed;
     public int followSpeed;
     public Rigidbody Enime;
@@ -24,7 +24,7 @@ public class skelliton : MonoBehaviour
         scoreboardObject = GameObject.Find("/score");
         scoreboardScript = scoreboardObject.GetComponent<score>();
         particlesistem = GetComponent<ParticleSystem>();
-        player = GameObject.Find("/newPlayer/Main Camera");
+        player = GameObject.Find("newPlayer/Main Camera");
         
     }
 
