@@ -4872,7 +4872,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 8075560138599890441}
   bodyPointer: {fileID: 5365120074850481312}
-  topSpeed: 605
+  topSpeed: 100
   followSpeed: 2829
   Enime: {fileID: 3797958505162345376}
   boxCollider: {fileID: 4051104840099431379}
@@ -5068,7 +5068,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5365120074850481312}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5151,7 +5151,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8075560138599890441}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

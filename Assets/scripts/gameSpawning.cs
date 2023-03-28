@@ -5,6 +5,7 @@ using UnityEngine;
 public class gameSpawning : MonoBehaviour
 {
     private Animator anim;
+    private float time;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,8 @@ public class gameSpawning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        time += 1f * Time.deltaTime;
     }
+    
+
 }

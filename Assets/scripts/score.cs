@@ -9,9 +9,12 @@ public class score : MonoBehaviour
     private string printText;
     public int playerScore;
     public TextMeshPro text;
+    public TextMeshPro textGUI;
     // Start is called before the first frame update
     void Start()
     {
+        GameObject i = GameObject.Find("newPlayer/Main Camera/GuiScore");
+        textGUI = i.GetComponent<TextMeshPro>();
         playerScore = 0;
     }
 
@@ -20,7 +23,8 @@ public class score : MonoBehaviour
     {
 
         scoreText = playerScore.ToString();
-        printText = "score:" + scoreText;
+        printText = "score: " + scoreText;
         text.text = printText;
+        textGUI.text = printText;
     }
 }

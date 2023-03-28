@@ -92,7 +92,7 @@ public class newPlayerControlls : MonoBehaviour
             hightDifrents = Hight;
         }
         if(OnFloor == false && slidng == false){
-            moveSpeed = 20;
+            moveSpeed = 50;
         }
         else if(OnFloor == true && slidng == false){
             moveSpeed = 100;

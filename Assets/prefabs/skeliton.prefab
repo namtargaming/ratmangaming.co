@@ -52,7 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 3731815431830333297}
   topSpeed: 22
-  followSpeed: 100
+  followSpeed: 60
   Enime: {fileID: 3797958505162345376}
   boxCollider: {fileID: 2797868434461833986}
   anim: {fileID: 0}

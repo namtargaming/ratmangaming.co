@@ -24,6 +24,7 @@ public class zobie : MonoBehaviour
     public LayerMask whatIsGround;
     private score scoreboardScript; 
     private GameObject scoreboardObject;
+    public bool jumpAnabled;
     void Start()
     {
         scoreboardObject = GameObject.Find("/score");
@@ -64,7 +65,7 @@ public class zobie : MonoBehaviour
         }
     }
     private void OnTriggerExit(Collider other){
-        if(other.gameObject.tag == ("Player")){
+        if(other.gameObject.tag == ("Player") && jumpAnabled){
             jumpReaddy = true;
         }
     }
