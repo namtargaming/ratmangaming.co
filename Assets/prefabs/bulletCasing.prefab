@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletshellspeed: 100
-  bulletshellLifeTime: 10
+  bulletshellLifeTime: 5
 --- !u!1 &8278423725650702487
 GameObject:
   m_ObjectHideFlags: 0
