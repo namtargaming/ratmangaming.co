@@ -15,7 +15,7 @@ public class skelliton : MonoBehaviour
     private ParticleSystem particlesistem;
     private bool alive = true;
     private Vector3 flatVel;
-    public Animator anim;
+ //   public Animator anim;
     private score scoreboardScript; 
     private GameObject scoreboardObject;
     void Start()
@@ -37,7 +37,7 @@ public class skelliton : MonoBehaviour
             Destroy(gameObject);
         }
        }
-       // anim.Play("Base Layer.Scene", 0 ,0.0f);
+ //      anim.Play("Base Layer.skull movement", 0 ,0.0f);
     }
     private void FixedUpdate() {
         move();
