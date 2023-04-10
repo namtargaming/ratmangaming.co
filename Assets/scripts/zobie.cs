@@ -36,7 +36,7 @@ public class zobie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        OnFloor = Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 0.1f,transform.position.z), Vector3.down, 1, whatIsGround);
+        OnFloor = Physics.Raycast(new Vector3(transform.position.x,transform.position.y + 0.1f,transform.position.z), Vector3.down, 1.25f, whatIsGround);
         SpeedControl();
         if(alive == false){
             if(particlesistem.isPlaying == false){
