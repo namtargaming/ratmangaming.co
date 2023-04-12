@@ -7,6 +7,7 @@ public class startcontroler : MonoBehaviour
 {   
 
     public bool hovoring = false;
+    public string sean;
     [SerializeField]
     private InputActionReference startbutton;
     // Start is called before the first frame update
@@ -20,7 +21,7 @@ public class startcontroler : MonoBehaviour
     }
     private void startGame(InputAction.CallbackContext obj){
         if (hovoring == true){
-            SceneManager.LoadScene("gameArina"); 
+            SceneManager.LoadScene(sean); 
         }
     }
     public void hooving(){

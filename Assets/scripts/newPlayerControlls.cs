@@ -161,6 +161,6 @@ public class newPlayerControlls : MonoBehaviour
    }
 
     public void die(){
-        SceneManager.LoadScene("main");
+        SceneManager.LoadScene("dead");
     }
 }

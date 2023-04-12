@@ -9,7 +9,7 @@ public class trphy : MonoBehaviour
     [SerializeField]
     // Start is called before the first frame update
 
-   void OnCollisionEnter(Collision collision){
+   void OnTriggerEnter(Collider collision){
      if(collision.gameObject.tag == ("Player"))
      {
         SceneManager.LoadScene("end"); 

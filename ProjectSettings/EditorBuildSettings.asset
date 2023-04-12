@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/gameArina.unity
     guid: 45881abec56cee34eb6dae711a42f513
+  - enabled: 1
+    path: Assets/Scenes/end.unity
+    guid: 664928f561fae0d4381f6b61ced74ccb
+  - enabled: 1
+    path: Assets/Scenes/dead.unity
+    guid: 0103792b1e16ea54a88b063398217e87
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: c6f95d83c30bb424e87c189769de9bf6,
       type: 2}
